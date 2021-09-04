@@ -1,0 +1,128 @@
+.ticket-item {
+  position: relative;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.ticket-content {
+  position: relative;
+  z-index: 1;
+}
+
+.event-header {
+  background-position: right bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.svg-bg {
+  position: absolute;
+  width: 150%;
+  top: 50%;
+  left: -20%;
+  transform: translateY(-50%);
+}
+
+
+.spiner-btn {
+  display: flex;
+
+  .spiner-input {
+    padding: .375rem .75rem;
+    border: none;
+    background-color: transparent;
+  }
+
+  .spiner-input--decrement {}
+}
+
+
+
+.seats-map {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+  // width: 100%;
+}
+
+.canvas-seat-map {
+  // background-image: url(../assets/map-bg.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 741px;
+
+
+  canvas {
+    cursor: pointer;
+  }
+}
+
+.seate {
+  position: relative;
+  height: 100px;
+  // height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+}
+
+.seate-body {
+  width: 50px;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #40ff59;
+}
+
+.selected-seate {
+  .seate-body {
+    background-color: #40ff59;
+
+  }
+
+  .seate-chair {
+    background-color: #40ff59;
+
+  }
+}
+
+.seate-chair {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #40ff59;
+  position: absolute;
+
+  &.left_top,
+  &.left_bottom {
+    left: -30px;
+  }
+
+  &.left_top,
+  &.right_top {
+    top: 25px;
+  }
+
+  &.left_bottom,
+  &.right_bottom {
+    bottom: 25px;
+  }
+
+  &.right_top,
+  &.right_bottom {
+    right: -30px;
+  }
+
+}
+
+.glass {
+  height: inherit;
+  width: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: -70px;
+  border-radius: 20px;
+}

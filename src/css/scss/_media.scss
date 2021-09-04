@@ -1,0 +1,163 @@
+/* 
+
+   ============================= media responsive ============================= 
+
+*/
+/* media responsive for desktop screen */
+@include desktopScreen {
+   header {
+      h1 {
+         padding-top: 0;
+      }
+   }
+   .homepage-header h1 {
+      max-width: 650px;
+   }
+}
+
+/* media responsive for tablet screen */
+@include tabletScreen {
+   .h1 {
+      text-align: right;
+   }
+   .switch-items {
+      padding-left: 30px;
+   }
+   .img-block {
+      display: none;
+   }
+}
+
+/* media responsive for tablet wide screen */
+@include tabletwideScreen {
+   .top-navbar {
+      display: none;
+   }
+   .main-navbar {
+      height: auto !important;
+      padding: 20px !important;
+   } 
+   .navbar-nav {
+      // height: auto;
+      .nav-item {
+         width: 100%;
+      }
+   }
+   .navbar-brand {
+      padding-left: 20px;
+   }
+   header {
+      .list-group-items {
+         flex-wrap: wrap;
+         width: 100%;
+         .list-item {
+            margin-right: 20px;
+            margin-top: 15px;
+         }
+      }
+   }
+
+   .md-text {
+      font-size: 18px;
+   }
+
+   .messaging-services-block {
+      .card-title {
+         font-size: 18px;
+      }
+   }
+
+
+   .footer-links {
+      .navbar-nav {
+         margin-bottom: 15px;
+      }
+      .ml-auto {
+         margin-left: 0 !important;
+      }
+   }
+
+   footer {
+      img {
+         margin-bottom: 15px;
+      }
+      .d-flex {
+         flex-direction: column;
+      }
+   }
+
+   .max-text-lmt-medium,
+   .max-text-lmt-small,
+   .max-text-lmt-x-small {
+      width: 100%;
+   }
+}
+
+
+@include tabletScreen {
+   .navbar-nav {
+      border-bottom: 1px solid rgba($color: #eee, $alpha: 1);
+      margin-bottom: 15px;
+      .nav-item {
+         border: none !important;
+      }
+   }
+   .megamenu  {
+      .dropdown-toggle {
+         display: flex !important;
+         justify-content: space-between;
+         align-items: center;
+         background-color: $gray-100;
+         border-radius: 200px;
+         padding: 0.5rem 2.4em;
+      }
+   }
+
+   .search-wrap .form-control, .search-wrap .form-select {
+      border: none
+   }
+
+   .footer-wrap {
+      .navbar-nav {
+         border-bottom: none !important
+      }
+   }
+}
+/* media responsive for phone wide screen */
+@include phoneWideScreen {
+
+   .btn {
+      width: 100%;
+   }
+
+   .main-navbar {
+      padding: 10px 0 !important;
+   }
+
+
+   .logo-on-scroll {
+      display: none !important;
+   }
+
+   .nav-tabs {
+      justify-content: flex-start !important;
+      .nav-link {
+         font-size: 12px;
+         padding: 0.5rem 0.5rem !important;
+      }
+   }
+
+
+
+}
+/* media responsive for phone screen */
+@include phoneScreen {
+   .small-btn {
+      font-size: 11px;
+   }
+}
+/* 
+
+   ============================= End media responsive ============================= 
+
+*/

@@ -1,0 +1,180 @@
+// creat style over bootstrap css style 
+/* ----------------------------------- Card Component ----------------------------------- */
+.card {
+   border: none;
+
+}
+
+.card-height-md {
+   height: 540px;
+}
+
+.card-body {
+   display: -webkit-flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+}
+
+.card-figure,
+figure {
+   height: 100%;
+
+   img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+
+}
+
+/* if there is an img in the card */
+.card-img-top,
+.default-image {
+   min-height: 200px;
+   max-height: 200px;
+}
+
+.card-img-top {
+   object-fit: cover;
+   object-position: center;
+}
+
+.card-overlay {
+   background: linear-gradient(0deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0.6839110644257703) 43%, rgba(0, 0, 0, .9) 100%);
+}
+
+.card-content {
+   width: 100%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   background: linear-gradient(0deg, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0.6839110644257703) 43%, rgba(0, 0, 0, .9) 100%);
+
+}
+
+/* class for hover on the card */
+.card-hover {
+   transition: box-shadow 0.3s ease-in-out;
+
+   &:hover {
+      cursor: pointer;
+      // background-color: rgba(#1b1f23, 0.8);
+      // transform: translateY(-3px);
+      box-shadow: $box-shadow-large;
+
+      svg {
+         fill: $gold !important;
+      }
+
+      .text-btn {
+         color: $gold;
+      }
+   }
+}
+
+/* class for transition the card if there is a link */
+.card-transition {
+   transition: transform 420ms cubic-bezier(0.165, 0.84, 0.44, 1);
+   cursor: pointer;
+
+   &:hover {
+      box-shadow: $box-shadow-medium;
+      background-color: $white;
+      color: $blue-dark;
+      border-color: transparent !important;
+      transform: scale(1.02) translateY(-3px);
+
+      .h4,
+      .label-title {
+         color: $gold
+      }
+
+      svg {
+         fill: $blue-dark;
+      }
+   }
+}
+
+/* arrow card */
+.arrow-card {
+   justify-content: space-between;
+}
+
+
+.card-img-top {
+   border-top-right-radius: 8px !important;
+   border-top-left-radius: 8px !important;
+}
+
+/* card icon class */
+.card-icon {
+   margin-bottom: 22px;
+}
+
+
+.shareeki-icon {
+   width: 55px;
+   // height: 55px
+}
+
+.crlc-icon {
+   border-radius: 50%;
+   width: 45px;
+   height: 45px;
+   display: flex;
+   justify-content: center;
+   align-items: center
+}
+
+/* x small icon class */
+.sx-icon {
+
+   svg,
+   img {
+      width: 18px;
+      height: 18px;
+   }
+}
+
+/* m small icon class */
+.sm-icon {
+   svg {
+      width: 40px;
+      height: 40px;
+   }
+}
+
+/* medium icon class */
+.md-icon {
+   svg {
+      width: 45px;
+      height: 45px;
+   }
+}
+
+/* large icon class */
+.lg-icon {
+   svg {
+      width: 55px;
+      height: 55px;
+   }
+}
+
+/* card footer */
+.card-footer {
+   border-top: none;
+   padding: 0.75rem 1rem;
+
+   .btn {
+      font-size: 12px;
+   }
+}
+
+/* ----------------------------------- end Card Component ----------------------------------- */
+
+
+.seat-map_wrap {
+   width: 100%;
+   height: 400px;
+   background-color: #eee;
+}

@@ -1,0 +1,15 @@
+.page-item:not(:first-child) .page-link {
+ margin-right: 6px !important;
+
+}
+.page-link {
+   box-shadow: $box-shadow-medium;
+   padding: 0.375rem 1.75rem;
+   border: none;
+   color: $blue-light;
+   &:hover {
+      color: $blue-dark;
+      background-color: $blue-200;
+
+   }
+}

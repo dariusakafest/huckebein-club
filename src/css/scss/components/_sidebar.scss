@@ -1,0 +1,41 @@
+.admin-header,
+.sidebar-body {
+   padding: 15px 25px;
+}
+.admin-header {
+
+}
+
+.sidebar-wrap {
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   border-right: $border-base;
+   height: 100%;
+   z-index: 14;
+}
+
+.sidebar {
+   width: 280px;
+   z-index: 11;
+   overflow: hidden;
+   min-width: 280px;
+   position: relative;
+   flex: 0 0 280px;
+   transition: all .2s;
+   height: 100%;
+}
+
+.sidebar-body {
+   .nav-link {
+      padding: .8rem 1rem;
+      svg {
+         fill: rgba(34,34,51,0.7);
+      }
+      &.active {
+         svg {
+            fill: $white;
+         }
+      }
+   }
+}

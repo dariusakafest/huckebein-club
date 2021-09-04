@@ -1,0 +1,40 @@
+// Helpers
+@import "scss/helpers/var";
+@import "scss/helpers/mixin";
+
+// Utilities
+@import "scss/utilities/colors";
+@import "scss/utilities/box-shadow";
+@import "scss/utilities/borders";
+@import "scss/utilities/typography";
+// @import "scss/utilities/backgrounds";
+@import "scss/utilities/flexbox";
+@import "scss/utilities/grid";
+
+// Components
+@import "scss/components/header";
+
+@import "scss/components/buttons";
+@import "scss/components/navbar";
+@import "scss/components/footer";
+@import "scss/components/form";
+@import "scss/components/accordion";
+@import "scss/components/card";
+@import "scss/components/dropdown";
+@import "scss/components/tabs";
+@import "scss/components/loading-screen";
+@import "scss/components/pagination";
+@import "scss/components/drop-files";
+@import "scss/components/sidebar";
+@import "scss/components/swiper";
+
+// Layout
+@import "scss/layout/event";
+@import "scss/layout/seats";
+// @import "scss/layout/product-page";
+// @import "scss/layout/admin";
+
+@import "scss/global";
+
+// media for responsive
+@import "scss/media";
