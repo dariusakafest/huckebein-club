@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500;700;900&display=swap');
 // media system
 
 $desktopWideScreen: 1170px;
@@ -17,6 +16,8 @@ $gray-100: #DFDFDF !default;
 
 $black: #0A1213 !default;
 $white: #DFDFDF !default;
+$brown: #131311 !default;
+$brown-100: #D5D5B9 !default;
 $red-300: #F42300 !default;
 $red-500: #dc3545 !default;
 $blue-800: #33475B !default;
@@ -48,10 +49,9 @@ $bg-blue-light: $blue-light;
 
 // text colors Variables 
 
-$text-white-heading: $white;
-$text-white-content: rgba($white, .8);
-$text-red-heading: $red-500;
-$text-red-content: rgba($red-500, .8);
+$text-white-heading: $brown-100;
+$text-white-content: rgba($brown-100, .8);
+
 
 $text-dark-heading: $black;
 $text-dark-content: rgba($black, .8);
@@ -69,9 +69,7 @@ $open-sans-font: 'Open Sans',
 sans-serif;
 $roboto-font: 'Roboto Mono',
 monospace;
-$rubik-font: 'Rubik',
-sans-serif;
-$tajawal-font: 'Tajawal',
+$anton-font: 'Anton',
 sans-serif;
 
 
@@ -116,10 +114,10 @@ $f5 : 12px !important;
 
 // Box shadow
 
-$box-shadow: 0 1px 0 rgba($blue-800, 0.04) !default;
-$box-shadow-medium: 0 3px 6px rgba($blue-800, 0.12) !default;
-$box-shadow-large: 0 8px 22px rgba($black, .5) !default;
-$box-shadow-extra-large: 0 12px 38px rgba($blue-800, 0.4) !default;
+$box-shadow: 0 1px 0 rgba($brown, 0.04) !default;
+$box-shadow-medium: 0 3px 6px rgba($brown, 0.12) !default;
+$box-shadow-large: 0 8px 22px rgba($brown, .5) !default;
+$box-shadow-extra-large: 0 12px 38px rgba($brown, 0.4) !default;
 
 
 // Border
@@ -127,3 +125,7 @@ $border-base: 1px solid rgba(#dee2e6, .2);
 
 // padding
 $lg-block-padding: 80px 0;
+
+
+// sidebar vars
+$sidebar-width: 260px

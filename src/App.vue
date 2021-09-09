@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <NavBar/>
+    <NavBar v-if="!isAdmin" />
     <router-view />
-    <FooterBar />
+    <FooterBar v-if="!isAdmin" />
   </div>
 </template>
 
@@ -18,6 +14,19 @@ export default {
 	components: {
 		NavBar,
 		FooterBar
+	},
+	computed: {
+		isAdmin: {
+			get() {
+				return this.$store.state.isAdmin;
+			},
+			set(value) {
+				this.$store.commit("isAdmin", value);
+			}
+		}
+	},
+	mounted() {
+		this.isAdmin = false;
 	}
 };
 </script>

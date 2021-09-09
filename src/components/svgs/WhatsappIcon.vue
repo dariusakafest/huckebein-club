@@ -19,14 +19,10 @@
 </template>
 
 <script>
+import fill from "./utilities/fill";
 export default {
 	name: "whatsapp-icon",
-	props: {
-		fill: {
-			type: String,
-			default: () => {}
-		}
-	}
+	mixins: [fill]
 };
 </script>
 

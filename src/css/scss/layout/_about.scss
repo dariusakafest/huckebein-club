@@ -1,0 +1,14 @@
+.swiper-container {
+  height: auto !important;
+}
+
+.swiper-slide {
+  width: 60%;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: .3;
+
+  &.swiper-slide-active {
+    opacity: 1;
+  }
+}

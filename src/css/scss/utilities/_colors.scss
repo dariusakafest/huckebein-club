@@ -7,134 +7,137 @@
 /* ---------- Background colors Alias ---------- */
 
 .bg-gray-light {
-   background-color: $gray-100;
+  background-color: $gray-100;
 }
 
 .bg-gold {
-   background-color: $gold;
+  background-color: $gold;
 }
 
 .bg-gold-400 {
-   background-color: rgba($gold, 0.2);
+  background-color: rgba($gold, 0.2);
 }
 
 .bg-gold-light {
-   background-color: rgba($gold, 0.08);
+  background-color: rgba($gold, 0.08);
 }
 
 .bg-gold-300 {
-   background-color: rgba($gold, 0.4)
+  background-color: rgba($gold, 0.4)
 }
 
 .bg-blue-200 {
-   background-color: $blue-200 !important;
+  background-color: $blue-200 !important;
 }
 
 .bg-blue-light {
-   background-color: $bg-blue-light !important;
+  background-color: $bg-blue-light !important;
 }
 
 .bg-blue-dark {
-   background-color: $blue-dark;
+  background-color: $blue-dark;
 }
 
 .bg-yellow {
-   background-color: $yellow;
+  background-color: $yellow;
 }
 
+.bg-brown-light {
+  background-color: #252523;
+}
 
 /* ---------- text colors Alias ---------- */
 
 /* for white heading color */
 .text-white-heading {
-   color: $text-white-heading !important;
+  color: $text-white-heading !important;
 }
 
 /* for white content color */
 .text-white-content {
-   color: $text-white-content;
+  color: $text-white-content;
 }
 
 /* for dark heading color */
 .text-dark-heading {
-   color: $text-dark-heading;
+  color: $text-dark-heading;
 }
 
 /* for dark content color */
 .text-dark-content {
-   color: $text-dark-content;
+  color: $text-dark-content;
 }
 
 /* for blue light heading color */
 .text-blue-light-heading {
-   color: $blue-light;
+  color: $blue-light;
 }
 
 /* for dark content color */
 .text-blue-light-content {
-   color: $blue-light;
+  color: $blue-light;
 }
 
 
 /* for gold content color */
 .text-gold-content {
-   color: $text-gold-content;
+  color: $text-gold-content;
 }
 
 /* for gold heading color */
 .text-gold-heading {
-   color: $text-gold-heading;
+  color: $text-gold-heading;
 }
 
 /* for gradient heading text color */
 .text-gradient-red {
-   @include text-gradient;
+  @include text-gradient;
 }
 
 /* for label text color */
 label {
-   color: $text-dark-content;
+  color: $text-dark-content;
 }
 
 /* ---------- svg colors Alias ---------- */
 
 /* for svg blue color */
 .fill-blue {
-   fill: $text-dark-heading;
+  fill: $text-dark-heading;
 }
 
 /* for svg gold color */
 .fill-gold {
-   fill: $gold;
+  fill: $gold;
 }
 
 /* for svg blue-300 color */
 .fill-blue-300 {
-   fill: $text-dark-content;
+  fill: $text-dark-content;
 }
 
 /* for svg white color */
 .fill-white {
-   fill: $white
+  fill: $text-white-content
 }
 
 /* for svg white color */
 .fill-gray {
-   fill: $gray-100
+  fill: $gray-100
 }
 
 /* for svg white color */
 .fill-yellow {
-   fill: $yellow
+  fill: $yellow
 }
 
 /* link blue */
 .link-blue {
-   color: $blue-light;
+  color: $blue-light;
 
-   &:hover {
-      color: $blue-dark;
-   }
+  &:hover {
+    color: $blue-dark;
+  }
 }
 
 /* 

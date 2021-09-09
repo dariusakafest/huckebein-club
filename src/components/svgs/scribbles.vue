@@ -7,14 +7,11 @@
 </template>
 
 <script>
+import fill from "./utilities/fill";
+
 export default {
 	name: "scribbles-bg",
-	props: {
-		fill: {
-			type: String,
-			default: () => {}
-		}
-	}
+	mixins: [fill]
 };
 </script>
 

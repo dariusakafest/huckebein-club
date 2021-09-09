@@ -1,6 +1,11 @@
 
 <template>
-  <button class="btn main-btn" :class="[`bg-${color}`, {'uppercase': uppercase == true}, `border-radius-${radius}`]" type="button">{{title}}</button>
+  <button class="btn" :class="[color? `bg-${color}` : '', {'uppercase': uppercase == true}, radius ? `border-radius-${radius}` : '',btnStyle? `${btnStyle}-btn`: '']" type="button">
+    <slot default>
+      {{title}}
+    </slot>
+    <slot name="content"></slot>
+  </button>
 </template>
 
 <script>
@@ -21,6 +26,10 @@ export default {
 			default: () => {}
 		},
 		color: {
+			type: String,
+			default: () => {}
+		},
+		btnStyle: {
 			type: String,
 			default: () => {}
 		}

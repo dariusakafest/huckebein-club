@@ -1,0 +1,26 @@
+.admin-wrap {
+  grid-area: content / content / content / content;
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+
+.admin-container {
+  width: calc(100vw - #{$sidebar-width});
+  transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
+}
+
+.admin-content {
+
+
+
+  &_page {
+    height: calc(100vh - 56px);
+    box-sizing: border-box;
+    padding: 0px 0px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}

@@ -7,13 +7,12 @@
 @import "scss/utilities/box-shadow";
 @import "scss/utilities/borders";
 @import "scss/utilities/typography";
-// @import "scss/utilities/backgrounds";
+@import "scss/utilities/backgrounds";
 @import "scss/utilities/flexbox";
 @import "scss/utilities/grid";
 
 // Components
 @import "scss/components/header";
-
 @import "scss/components/buttons";
 @import "scss/components/navbar";
 @import "scss/components/footer";
@@ -25,14 +24,21 @@
 @import "scss/components/loading-screen";
 @import "scss/components/pagination";
 @import "scss/components/drop-files";
-@import "scss/components/sidebar";
+@import "scss/components/ticket/ticket";
+
 @import "scss/components/swiper";
+
+// Admin Components
+@import "scss/components/admin/admin";
+
+// Sidebar Components
+@import "scss/components/sidebar/sidebar";
 
 // Layout
 @import "scss/layout/event";
 @import "scss/layout/seats";
-// @import "scss/layout/product-page";
-// @import "scss/layout/admin";
+@import "scss/layout/about";
+
 
 @import "scss/global";
 

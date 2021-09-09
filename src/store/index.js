@@ -16,6 +16,7 @@ const text_fill = "#000";
 
 export default new Vuex.Store({
   state: {
+    isAdmin: false,
     events: [{
         id: 1,
         type: 'upcoming',
@@ -23,8 +24,9 @@ export default new Vuex.Store({
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
         img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
         date: {
+          month: "September",
           day: "10",
-          month: "FEB"
+          time: '11:00PM'
         },
         time: '8:30AM',
         link: "event-preview",
@@ -68,8 +70,9 @@ export default new Vuex.Store({
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
         img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
         date: {
+          month: "September",
           day: "10",
-          month: "FEB"
+          time: '11:00PM'
         },
         time: '8:30AM',
         link: "event-preview",
@@ -103,13 +106,14 @@ export default new Vuex.Store({
       },
       {
         id: 3,
-        type: 'upcoming',
+        type: 'soon',
         title: "Event name",
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
         img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
         date: {
+          month: "September",
           day: "10",
-          month: "FEB"
+          time: '11:00PM'
         },
         time: '8:30AM',
         link: "event-preview",
@@ -143,8 +147,9 @@ export default new Vuex.Store({
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
         img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
         date: {
+          month: "September",
           day: "10",
-          month: "FEB"
+          time: '11:00PM'
         },
         time: '8:30AM',
         link: "event-preview",
@@ -183,8 +188,9 @@ export default new Vuex.Store({
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
         img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
         date: {
+          month: "September",
           day: "10",
-          month: "FEB"
+          time: '11:00PM'
         },
         time: '8:30AM',
         link: "event-preview",
@@ -223,8 +229,9 @@ export default new Vuex.Store({
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
         img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
         date: {
+          month: "September",
           day: "10",
-          month: "FEB"
+          time: '11:00PM'
         },
         time: '8:30AM',
         link: "event-preview",
@@ -1757,6 +1764,7 @@ export default new Vuex.Store({
   },
   mutations: {
 
+    isAdmin: (state, isAdmin) => state.isAdmin = isAdmin
 
   },
   actions: {},

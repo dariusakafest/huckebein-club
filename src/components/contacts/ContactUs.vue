@@ -1,11 +1,10 @@
 <template>
-  <section class="contact-us pb-5">
+  <section class="contact-us pb-5 mt-5">
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-6">
-          <h2 class="h2 text-white-heading uppercase">contact us</h2>
-          <p class="f3 text-white-content">We're happy to answer questions and get you acquainted with huckebein
-          </p>
+          <h2 class="h2 text-white-heading uppercase">KONTAKT</h2>
+          <p class="f3 text-white-content">Wir beantworten gerne Fragen und machen Sie mit huckebein vertraut</p>
           <ul class="ps-2 mt-4">
             <li class="pb-3 text-white-heading">
               <span class="sx-icon">

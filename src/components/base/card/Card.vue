@@ -1,30 +1,31 @@
 <template>
-  <div class="card bg-transparent border-radius-large box-shadow-large overflow-hidden" :class="{'card-height-md': height == 'md'}">
-    <div class="card-body p-0 position-relative ">
-      <div class="card-content p-4 position-absolute d-flex flex-column justify-content-between text-start">
-        <div class="card-content_header">
-          <h3 class="h3 text-white-heading">{{title}}</h3>
-          <p class="f4 text-white-content">{{info}}</p>
-        </div>
-        <div class="card-content_footer text-end">
-          <span class="card-patch d-inline-block text-center p-2 border-radius-rounded bg-yellow w-auto">
-            <span class="d-block">{{day}}</span>
-            <strong class="h6 d-block uppercase">{{month}}</strong>
-          </span>
-        </div>
-      </div>
-      <div class="card-figure">
-        <figure class="mb-0">
-          <img :src="img" alt="">
-        </figure>
-      </div>
+  <div class="card bg-transparent border-radius-large box-shadow-large overflow-hidden bg-center" :style="`background-image: url(${img})`" :class="{'card-height-md': height == 'md'}">
+    <div class="card-body p-0 position-relative">
+      <div class="card-overlay_base"></div>
+      <div class="card-content w-100 h-100">
+        <div class="p-4 d-flex justify-content-between align-items-end text-start mb-3 h-100">
+          <div class="card-content_footer text-start">
+            <h2 class="h2 text-white-heading mb-0">{{month}} {{day}} <br> {{time}} </h2>
+          </div>
+          <button-base class="mt-4 p-0">
+            <template #content>
+              <span class="md-icon">
+                <arrow-right-icon :fill="'white'" />
+              </span>
+            </template>
+          </button-base>
 
+        </div>
       <router-link :to="{name: link, params: {id: eventId}}" class="stretched-link"></router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import ArrowRightIcon from "@/components/svgs/ArrowRightIcon";
+import ButtonBase from "@/components/base/buttons/ButtonBase";
+
 export default {
 	name: "card",
 	props: {
@@ -44,6 +45,10 @@ export default {
 			type: String,
 			default: () => {}
 		},
+		time: {
+			type: String,
+			default: () => {}
+		},
 		img: {
 			type: String,
 			default: () => {}
@@ -60,6 +65,10 @@ export default {
 			type: String,
 			default: () => {}
 		}
+	},
+	components: {
+		ArrowRightIcon,
+		ButtonBase
 	}
 };
 </script>

@@ -1,122 +1,126 @@
 /* ----------------------------------- Header Component ----------------------------------- */
 
 .homepage-header {
-   position: relative;
+  position: relative;
 
-   h1 {
-      margin-top: 0;
-      margin-bottom: 20px;
-      line-height: 1.5;
-      max-width: 850px;
-   }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 850px;
+  }
 
-   h5 {
-      font-family: "Gilroy-Regular";
-      margin-bottom: 25px;
-   }
+  h5 {
+    font-family: "Gilroy-Regular";
+    margin-bottom: 25px;
+  }
 
-   .list-group-items {
-      justify-content: space-between;
-      margin: 0;
-      flex-wrap: wrap;
-      padding: 20px;
-   }
+  .list-group-items {
+    justify-content: space-between;
+    margin: 0;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
 
-   .abs-box {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      bottom: -149px;
-   }
+  .abs-box {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -149px;
+  }
+}
+
+.header-image {
+  min-height: 100vh;
 }
 
 /* main header class */
 .main-header {
-   overflow: hidden;
-   padding: 60px 0 60px;
+  overflow: hidden;
+  padding: 60px 0 60px;
 }
 
 /* main header padding class */
 .main-header_padding {
-   padding: 50px 0;
+  padding: 50px 0;
 }
 
 /* background draw class */
 .bg-draw {
-   position: absolute;
-   top: -170px;
-   right: -350px;
+  position: absolute;
+  top: -170px;
+  right: -350px;
 }
 
 /* features items block class */
 .features-items {
-   transition: 0.1s ease-in-out;
-   text-align: center;
-   padding-top: 30px;
-   margin-top: 40px;
-   border-top: 1px solid rgba(250, 251, 252, 0.2);
+  transition: 0.1s ease-in-out;
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(250, 251, 252, 0.2);
 
-   a {
-      text-decoration: none;
-      color: rgba(255, 255, 255, 0.8);
-      margin: 0 10px;
-      font-size: 20px;
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 10px;
+    font-size: 20px;
 
-      &:hover {
-         color: #fff;
-      }
-   }
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 
 /* logo on scroll class */
 .logo-on-scroll {
-   position: absolute;
-   left: 75px;
-   top: -15px;
-   display: none;
+  position: absolute;
+  left: 75px;
+  top: -15px;
+  display: none;
 
-   svg {
-      width: 40px;
-   }
+  svg {
+    width: 40px;
+  }
 }
 
 /* position fixed for features items block on scroll */
 .p-fixed {
-   z-index: 999;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   background-color: $white;
-   box-shadow: $box-shadow-large;
-   padding: 18px 0;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  box-shadow: $box-shadow-large;
+  padding: 18px 0;
 
-   margin-top: 0;
+  margin-top: 0;
 
-   a {
-      color: $text-dark-content;
-      font-size: $h4-size;
+  a {
+    color: $text-dark-content;
+    font-size: $h4-size;
 
-      &:hover {
-         color: $red-500;
-      }
-   }
+    &:hover {
+      color: $red-500;
+    }
+  }
 
-   .logo-on-scroll {
-      display: block;
-   }
+  .logo-on-scroll {
+    display: block;
+  }
 }
 
 
 .pt-120 {
-   padding-top: 120px
+  padding-top: 120px
 }
 
 /* -------------------- event header class -------------------- */
 .event-header {
-   .card-overlay {
-      padding-bottom: 50px;
-   }
+  .card-overlay {
+    padding-bottom: 50px;
+  }
 }
 
 /* ----------------------------------- end Header Component ----------------------------------- */

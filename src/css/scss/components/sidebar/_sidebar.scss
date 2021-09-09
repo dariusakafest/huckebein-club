@@ -1,0 +1,45 @@
+.admin-header,
+.sidebar-body {
+  padding: 15px 20px;
+}
+
+
+
+.sidebar {
+  min-width: $sidebar-width;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 $sidebar-width;
+  transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
+}
+
+.sidebar,
+.sidebar-wrap {
+  z-index: 14;
+}
+
+.sidebar-wrap {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: $sidebar-width;
+  background-color: #252522;
+  box-shadow: $box-shadow-large
+}
+
+.sidebar-body {
+  .nav-link {
+    padding: .8rem 1rem;
+
+    svg {
+      fill: rgba(34, 34, 51, 0.7);
+    }
+
+    &.active {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
