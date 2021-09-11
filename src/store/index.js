@@ -17,18 +17,19 @@ const text_fill = "#000";
 export default new Vuex.Store({
   state: {
     isAdmin: false,
+    preparing: false,
+    cuurentStep: 1,
     events: [{
         id: 1,
         type: 'upcoming',
         title: "Event name",
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
+        img: "https://huckebein-da.de/wp-content/uploads/2021/09/Teaser-1-Huckebein-1024x538.png",
         date: {
           month: "September",
           day: "10",
           time: '11:00PM'
         },
-        time: '8:30AM',
         link: "event-preview",
         tickets: [{
             type: 'standard',
@@ -74,7 +75,6 @@ export default new Vuex.Store({
           day: "10",
           time: '11:00PM'
         },
-        time: '8:30AM',
         link: "event-preview",
         tickets: [{
             type: 'standard',
@@ -115,7 +115,6 @@ export default new Vuex.Store({
           day: "10",
           time: '11:00PM'
         },
-        time: '8:30AM',
         link: "event-preview",
         tickets: [{
             type: 'standard',
@@ -151,7 +150,6 @@ export default new Vuex.Store({
           day: "10",
           time: '11:00PM'
         },
-        time: '8:30AM',
         link: "event-preview",
         tickets: [{
             type: 'standard',
@@ -192,7 +190,6 @@ export default new Vuex.Store({
           day: "10",
           time: '11:00PM'
         },
-        time: '8:30AM',
         link: "event-preview",
         tickets: [{
             type: 'standard',
@@ -233,7 +230,6 @@ export default new Vuex.Store({
           day: "10",
           time: '11:00PM'
         },
-        time: '8:30AM',
         link: "event-preview",
         tickets: [{
             type: 'standard',
@@ -1764,7 +1760,9 @@ export default new Vuex.Store({
   },
   mutations: {
 
-    isAdmin: (state, isAdmin) => state.isAdmin = isAdmin
+    isAdmin: (state, isAdmin) => state.isAdmin = isAdmin,
+    cuurentStep: (state, cuurentStep) => state.cuurentStep = cuurentStep,
+    preparing: (state, preparing) => state.preparing = preparing
 
   },
   actions: {},

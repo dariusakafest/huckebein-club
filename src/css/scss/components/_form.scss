@@ -3,7 +3,7 @@
 /* form control class */
 .form-control,
 .form-select {
-  min-height: 42px;
+  min-height: 50px;
 }
 
 .input-group-lg {}
@@ -16,13 +16,17 @@ textarea {
 
 .form-control,
 .form-select {
-  // border: none;
-  // border-radius: 0;
-  // border-bottom: $border-base;
+  background-color: #252523;
+  color: $text-white-heading !important;
+  border-color: $text-white-heading !important;
+
+  &::placeholder {
+    color: $text-white-heading;
+  }
 }
 
 .form-floating>label {
-  color: $gold;
+  color: $yellow;
 }
 
 .form-control:disabled,
@@ -38,9 +42,9 @@ textarea {
 .btn-check:checked,
 .btn-checked:checked,
   {
-  color: #212529;
+  color: inherit;
   background-color: transparent;
-  border-color: $gold !important;
+  border-color: $yellow !important;
   outline: 0 !important;
   box-shadow: none;
 }
@@ -71,12 +75,12 @@ textarea {
 .btn-checked.dropdown-toggle.show,
 .btn-checked-rounded:active,
 .btn-checked:active {
-  color: $gold;
-  background-color: $gold-light;
-  border-color: $gold;
+  color: $text-dark-heading;
+  background-color: $text-white-heading;
+  border-color: $text-white-heading;
 
   .h4 {
-    color: $gold !important;
+    color: $text-dark-heading !important;
   }
 }
 
@@ -87,6 +91,13 @@ textarea {
   padding: 1rem 1rem;
   font-size: 1rem;
   border-radius: .3rem;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+  border-color: $yellow !important;
+  outline: 0 !important;
+  box-shadow: none;
 }
 
 /* ----------------------------------- Footer Component ----------------------------------- */

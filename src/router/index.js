@@ -1,25 +1,37 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes = [{
     path: "/",
     name: "Home",
-    component: Home,
+    component: () =>
+      import( /* webpackChunkName: "seat" */ "../views/Home.vue"),
   },
   {
-    path: "/admin",
-    name: "admin",
+    path: "/about",
+    name: "About",
     component: () =>
-      import( /* webpackChunkName: "seat" */ "../views/Admin.vue"),
+      import( /* webpackChunkName: "seat" */ "../views/About.vue"),
   },
   {
     path: "/seat",
     name: "seat",
     component: () =>
       import( /* webpackChunkName: "seat" */ "../views/Seat.vue"),
+  },
+  {
+    path: "/tickt-options",
+    name: "tickt-options",
+    component: () =>
+      import( /* webpackChunkName: "seat" */ "../views/TicktOptions.vue"),
+  },
+  {
+    path: "/payment",
+    name: "payment",
+    component: () =>
+      import( /* webpackChunkName: "seat" */ "../views/Payment.vue"),
   },
   {
     path: "/events",

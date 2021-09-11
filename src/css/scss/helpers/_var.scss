@@ -67,8 +67,8 @@ $text-gradient-red: -webkit-linear-gradient(-70deg, $red-500 0%, $red-300 100%);
 // Typography Variables
 $open-sans-font: 'Open Sans',
 sans-serif;
-$roboto-font: 'Roboto Mono',
-monospace;
+$roboto-font: 'Roboto',
+sans-serif;
 $anton-font: 'Anton',
 sans-serif;
 
@@ -121,7 +121,8 @@ $box-shadow-extra-large: 0 12px 38px rgba($brown, 0.4) !default;
 
 
 // Border
-$border-base: 1px solid rgba(#dee2e6, .2);
+$border-base: 1px solid rgba($text-white-heading, .8);
+$border-base-light: 1px solid rgba($text-white-heading, .3);
 
 // padding
 $lg-block-padding: 80px 0;

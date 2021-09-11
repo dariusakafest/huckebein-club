@@ -1,5 +1,5 @@
 <template>
-  <div class="spiner-btn bg-gray-light border-radius-medium mt-2">
+  <div class="spiner-btn bg-brown-light border-radius-small mt-2">
     <button type="button" class="btn spiner-input--decrement border-right" id="spiner-input--decrement" @click="spiner('decrement')">-</button>
     <input class="flex-grow-1 spiner-input text-center" name="number" :max="max" type="number" readonly="" v-model="spin">
     <button type="button" class="btn spiner-input--increment border-left" id="spiner-input--increment" @click="spiner('increment')">+</button>

@@ -7,14 +7,21 @@
 /* heading font family */
 .h1,
 .h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  // font-weight: $font-weight-bold !important;
+.h3 {
   font-family: $anton-font;
   letter-spacing: 4px
 }
+
+
+
+.h4,
+.h5,
+.h6 {
+  font-weight: $font-weight-bold !important;
+  font-family: $roboto-font !important;
+  line-height: $lh-condensed;
+}
+
 
 /* heading size */
 .h1 {
@@ -23,20 +30,20 @@
 }
 
 .h2 {
-  font-size: $h1-size;
+  font-size: $h0-size;
   line-height: $lh-condensed;
 }
 
 .h3 {
-  font-size: $h2-size;
+  font-size: $h1-size;
 }
 
 .h4 {
-  font-size: $h4-size;
+  font-size: $h3-size;
 }
 
 .h5 {
-  font-size: $h5-size;
+  font-size: $h4-size;
 }
 
 .h6 {
@@ -73,6 +80,7 @@
 /* content style */
 
 p {
+  font-family: $roboto-font !important;
   font-size: $h3-size;
   font-weight: $font-weight-light;
   line-height: $lh-default !important;

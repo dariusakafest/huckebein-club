@@ -232,7 +232,6 @@ export default {
 			output: null,
 			offcanvas: null,
 			image: null,
-
 			selected: false,
 			seatForm: {},
 			configKonva: {

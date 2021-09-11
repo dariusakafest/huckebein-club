@@ -33,6 +33,13 @@
 }
 
 
+.border-hover {
+    border: 1px solid transparent !important;
+    &:hover {
+        border: 1px solid $yellow !important;
+    }
+}
+
 .border-dashed-gold {
    border: 2px dashed $gold !important;
 }
@@ -56,6 +63,7 @@
 .border-radius-rounded {
    border-radius: 200px
 }
+
 
 /* 
 

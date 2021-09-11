@@ -1,0 +1,12 @@
+.payment-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: $border-base-light;
+  padding: 22px 20px;
+  border-radius: 6px;
+}
+
+.ticket-wrap {
+  min-height: 517px;
+}

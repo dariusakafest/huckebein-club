@@ -1,5 +1,5 @@
 <template>
-  <div class="upcoming-events mb-5">
+  <div class="upcoming-events mb-md-5 mb-sm-0">
     <h1 class="h1 text-white-heading text-center uppercase mb-4 mt-4">Upcoming events</h1>
     <div class="row">
       <div v-for="event in events" :key="event.id" :class="[events.length == 2 ? 'col-lg-6' : 'col-lg-4', 'mb-3']">

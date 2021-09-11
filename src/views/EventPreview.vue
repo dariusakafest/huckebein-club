@@ -1,42 +1,27 @@
 <template>
   <div class="event-preview">
-    <header-image :backgroundImage="'https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg'">
+    <header-image class="pb-5 pt-120" :backgroundImage="event.img" minHeight="auto" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="base">
       <template #content>
-        <div class="row justify-content-end">
-          <div class="col-lg-4">
-            <card-container :boxShadow="'large'" :radius="'large'" :textAlign="'start'">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-7 mb-4 align-self-end">
+            <h1 class="h1 text-white-heading">{{event.date.month}}, {{event.date.day}} </h1>
+            <h1 class="h1 text-white-heading">{{event.date.time}}</h1>
+            <button-base class="mt-4 py-3" :color="'yellow'" :uppercase="true" :radius="true" title="Join us on Facebook" />
+          </div>
+          <div class="col-xl-4 col-lg-5 mb-4">
+            <card-container class="bg-brown-light" :boxShadow="'large'" :radius="'large'" :textAlign="'start'">
               <template #body>
-
-                <ticket></ticket>
-
+                <ticket :title="event.title" :info="event.info" :day="event.date.day" :month="event.date.month" :time="event.date.time" :tickets="event.tickets" :spases="event.spases"></ticket>
               </template>
             </card-container>
           </div>
         </div>
       </template>
     </header-image>
-    <section class="event-program mt-5">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 mt-5 mb-4" v-for="(time, index) in event.timeline" :key="index">
-            <event-timeline :title="time.title" :content="time.content" :time="time.time"></event-timeline>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="related">
-      <div class="container">
-        <h2 class="h2 text-white-heading text-center uppercase mb-4 mt-4">Upcoming events</h2>
-        <div class="row">
-          <div class="col-lg-4" v-for="event in upcomingEvents" :key="event.id">
-            <card :title="event.title" :info="event.info" :img="event.img" :day="event.date.day" :month="event.date.month" :height="'md'" :link="event.link" :eventId="event.id" />
-
-          </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <button-base class="mt-4" :color="'yellow'" :uppercase="true" :radius="true" :title="'all events'" />
-        </div>
+    <section class="event-program my-5 py-5">
+      <div class="container-fluid">
+        <h2 class="h2 text-white-heading mb-4">Event program</h2>
+        <event-timeline :timeline="event.timeline"></event-timeline>
       </div>
     </section>
 
@@ -47,17 +32,15 @@
 import { mapGetters } from "vuex";
 
 import CardContainer from "@/components/base/card/CardContainer";
-import Card from "@/components/base/card/Card";
 import ButtonBase from "@/components/base/buttons/ButtonBase";
 import HeaderImage from "@/components/base/header/HeaderImage";
-import Ticket from "@/components/ticket/Ticket";
+import Ticket from "@/components/ticket-system/Ticket";
 
 import EventTimeline from "@/components/events/event-preview/EventTimeline";
 
 export default {
 	name: "event-preview",
 	components: {
-		Card,
 		CardContainer,
 		ButtonBase,
 		HeaderImage,
@@ -71,7 +54,18 @@ export default {
 		}),
 		event() {
 			return this.events.find(event => event.id == this.$route.params.id);
+		},
+		cuurentStep: {
+			get() {
+				return this.$store.state.cuurentStep;
+			},
+			set(value) {
+				this.$store.commit("cuurentStep", value);
+			}
 		}
+	},
+	destroyed() {
+		this.cuurentStep = 1;
 	}
 };
 </script>

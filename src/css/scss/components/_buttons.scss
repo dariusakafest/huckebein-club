@@ -40,8 +40,8 @@
   border-color: transparent;
 
   &:hover {
-    fill: $blue-dark;
-    color: $blue-dark !important;
+    fill: $yellow;
+    color: $yellow !important;
   }
 }
 
@@ -157,6 +157,24 @@
 
   &:hover {
     color: $white;
+  }
+}
+
+
+.spiner-btn {
+  border: $border-base;
+  min-height: 50px;
+
+}
+
+.spiner-input--decrement,
+.spiner-input--increment,
+.spiner-input {
+  color: $text-white-heading;
+  height: inherit;
+
+  &:hover {
+    color: $yellow !important;
   }
 }
 

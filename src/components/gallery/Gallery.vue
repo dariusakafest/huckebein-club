@@ -1,19 +1,20 @@
 <template>
-  <section class="gallery-block py-5 my-5">
-    <div class="container-fluid">
+  <section class="gallery-block py-5 mb-5 mt-2">
+    <div class="container-lg-fluid container-sm">
       <h1 class="h1 text-white-heading text-center uppercase mb-4">
         GALERIE
       </h1>
+      <swiper ref="swiper" class="swiper" :options="swiperOption">
+        <swiper-slide v-for="(slide, index) in slides" :key="index">
+          <img :src="slide" alt="Cover of DK on 12th Isle">
+        </swiper-slide>
 
-      <swiper class="swiper" :options="swiperOption">
-        <swiper-slide><img src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg" alt="Cover of DK on 12th Isle"></swiper-slide>
-        <swiper-slide> <img src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-03-900x500.jpg" alt="K2-138 6 Planets Artwork (Artist's Illustration) "></swiper-slide>
-        <swiper-slide><img src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-location-02.jpg" alt="A first look at dunes"></swiper-slide>
-        <swiper-slide><img src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-02-900x500.jpg" alt="Datassette – Existenzmaximum"></swiper-slide>
-        <swiper-slide><img src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-05-900x500.jpg" alt="Ezinu Crater"></swiper-slide>
-        <swiper-slide><img src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-location-01.jpg" alt="Polar Ice"></swiper-slide>
-        <!-- <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div> -->
+        <template v-slot:button-prev>
+          <div class="swiper-button-prev" @click="slidePrev()"></div>
+        </template>
+        <template v-slot:button-next>
+          <div class="swiper-button-next" @click="slideNext()"></div>
+        </template>
       </swiper>
     </div>
   </section>
@@ -31,43 +32,52 @@ export default {
 	},
 	data() {
 		return {
+			slides: [
+				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
+				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-03-900x500.jpg",
+				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-location-02.jpg",
+				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-02-900x500.jpg",
+				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-05-900x500.jpg",
+				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-location-01.jpg"
+			],
 			swiperOption: {
-				slidesPerView: "auto",
-
+				centeredSlides: false,
 				spaceBetween: 30,
-				// navigation: true,
+				grabCursor: true,
 				navigation: {
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev"
 				},
 				breakpoints: {
-					768: {
-						centeredSlides: false
+					1000: {
+						slidesPerView: 2
 					},
-					1024: {
-						centeredSlides: true
+					760: {
+						slidesPerView: 1
 					}
 				}
 			}
 		};
 	},
-	mounted() {
-		// new Splide("#splide", {
-		// 	perPage: 3,
-		// 	perMove: 1,
-		// 	height: "9rem",
-		// 	focus: "center",
-		// 	trimSpace: false,
-		// 	breakpoints: {
-		// 		600: {
-		// 			perPage: 2,
-		// 			height: "6rem"
-		// 		}
-		// 	}
-		// })
+	methods: {
+		slidePrev() {
+			return this.$refs.swiper.swiperInstance.slidePrev();
+		},
+		slideNext() {
+			return this.$refs.swiper.swiperInstance.slideNext();
+		}
 	}
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.swiper-container {
+	height: auto !important;
+}
+
+.swiper-slide {
+	width: 60%;
+	border-radius: 12px;
+	overflow: hidden;
+}
 </style>

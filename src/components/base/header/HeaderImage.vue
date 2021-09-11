@@ -1,6 +1,12 @@
 <template>
-  <header :style="`background-image: url(${backgroundImage})`" :class="[filterImage? `${filterImage}` : '', `d-${contentDisplay}`,flexAlign ? `align-items-${flexAlign}` : '', 'header-image bg-center ']">
-    <div class="card-overlay_brown"></div>
+  <header :style="{'background-image': `url(${backgroundImage})`, 'min-height': `${minHeight}`}" :class="[filterImage? `${filterImage}` : '', `d-${contentDisplay}`,flexAlign ? `align-items-${flexAlign}` : '', 'header-image bg-center']">
+    <template v-if="overlay">
+      <div :class="`card-overlay_${overlayType}`">
+        <div class="card-overlay_backgrounds">
+          <slot name="background"></slot>
+        </div>
+      </div>
+    </template>
     <div class="card-content w-100">
       <div class="container">
         <slot name="content"></slot>
@@ -27,6 +33,18 @@ export default {
 			default: () => {}
 		},
 		flexAlign: {
+			type: String,
+			default: () => {}
+		},
+		minHeight: {
+			type: String,
+			default: () => {}
+		},
+		overlay: {
+			type: Boolean,
+			default: () => {}
+		},
+		overlayType: {
 			type: String,
 			default: () => {}
 		}

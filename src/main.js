@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 
 // popperjs
-import '@popperjs/core'
+// import '@popperjs/core'
 // bootstrap
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';

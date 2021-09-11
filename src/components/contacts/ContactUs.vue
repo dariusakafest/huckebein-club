@@ -2,7 +2,7 @@
   <section class="contact-us pb-5 mt-5">
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-lg-6">
+        <div class="col-xl-6 col-lg-7">
           <h2 class="h2 text-white-heading uppercase">KONTAKT</h2>
           <p class="f3 text-white-content">Wir beantworten gerne Fragen und machen Sie mit huckebein vertraut</p>
           <ul class="ps-2 mt-4">
@@ -26,8 +26,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-4">
-          <div class="card border-radius-large">
+        <div class="col-xl-4 col-lg-5">
+          <div class="card border-radius-large bg-brown-light">
             <div class="card-body p-4">
               <form action="" class="mb-0">
                 <input class="form-control form-control-lg mb-3" type="text" placeholder="Your name" aria-label="">
