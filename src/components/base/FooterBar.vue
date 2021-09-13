@@ -3,7 +3,7 @@
     <div class="footer-wrap">
       <div class="footer-bottom py-5">
         <div class="container">
-          <div class="d-flex justify-content-between">
+          <div class="footer-content d-flex justify-content-center">
             <div class="social-networks-wrapper">
               <a class="facebook-icon" href="https://www.facebook.com/Club.Huckebein/" title="Facebook" aria-label="Facebook">
                 <span class="sm-icon">
@@ -26,7 +26,7 @@
                 </span>
               </a>
             </div>
-            <h5 class="h5 mb-0 text-white-heading">Concept and implementation: Ideenschupser - a brand of Colima GmbH</h5>
+
           </div>
         </div>
       </div>
