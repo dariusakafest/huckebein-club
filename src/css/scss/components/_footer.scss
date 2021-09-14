@@ -23,20 +23,36 @@ footer {
 
 .footer-wrap {
   flex-direction: column;
-  padding-top: 20px;
+  // padding-top: 20px;
 
-  .footer-links {
-    margin-bottom: 15px;
+  .footer-content {
 
-    .navbar-brand {
-      svg {
-        width: 240px;
-        height: 100px;
+    .footer-links {
+      margin-bottom: 15px;
+
+      .navbar-brand {
+        svg {
+          width: 240px;
+          height: 100px;
+        }
+      }
+
+      p {
+        padding-left: 10px;
+      }
+
+      .nav-item {
+        padding: 0 10px;
+
+        .nav-link {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }
       }
     }
 
-    p {
-      padding-left: 10px;
+    .router-link-exact-active {
+      border: none
     }
   }
 
@@ -47,9 +63,6 @@ footer {
     color: $text-dark-heading;
   }
 
-  .nav-item {
-    padding: 0 10px;
-  }
 
   .address {
     padding-top: 15px;
@@ -85,8 +98,6 @@ footer {
 
 .facebook-icon,
 .instagram-icon,
-.youtube-icon {
-  
-}
+.youtube-icon {}
 
 /* ----------------------------------- end Footer Component ----------------------------------- */

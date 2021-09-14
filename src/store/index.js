@@ -24,7 +24,7 @@ export default new Vuex.Store({
         type: 'upcoming',
         title: "Event name",
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://huckebein-da.de/wp-content/uploads/2021/09/Teaser-1-Huckebein-1024x538.png",
+        img: "https://i.postimg.cc/mgyzdSSB/241736835-522688485491006-2980202528459884281-n.jpg",
         date: {
           month: "September",
           day: "10",
@@ -62,6 +62,12 @@ export default new Vuex.Store({
           }
         ],
         spases: 10,
+        galeries: [
+          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
+        ]
 
       },
       {
@@ -69,7 +75,7 @@ export default new Vuex.Store({
         type: 'upcoming',
         title: "Event name",
         info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
+        img: "https://i.postimg.cc/X7hQjnMp/178549330-237709484808425-8337052471093134629-n.jpg",
         date: {
           month: "September",
           day: "10",
@@ -103,6 +109,12 @@ export default new Vuex.Store({
 
         ],
         spases: 10,
+        galeries: [
+          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
+        ]
       },
       {
         id: 3,
@@ -138,6 +150,12 @@ export default new Vuex.Store({
 
         ],
         spases: 10,
+        galeries: [
+          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
+        ]
       },
       {
         id: 4,
@@ -178,6 +196,12 @@ export default new Vuex.Store({
 
         ],
         spases: 4,
+        galeries: [
+          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
+        ]
       },
       {
         id: 5,
@@ -218,6 +242,12 @@ export default new Vuex.Store({
 
         ],
         spases: 3,
+        galeries: [
+          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
+        ]
       },
       {
         id: 6,
@@ -258,6 +288,12 @@ export default new Vuex.Store({
 
         ],
         spases: 3,
+        galeries: [
+          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
+          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
+        ]
       },
     ],
     seats: [{
@@ -1753,6 +1789,18 @@ export default new Vuex.Store({
     },
     allEvents: state => {
       return state.events
+    },
+    galeries: state => {
+      return state.events.map(event => {
+
+        const galeries = {}
+        galeries.title = event.title;
+        galeries.galeries = event.galeries;
+        galeries.id = event.id;
+        galeries.img = event.img
+
+        return galeries
+      })
     },
     seats: state => {
       return state.seats

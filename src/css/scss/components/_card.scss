@@ -16,12 +16,12 @@
 }
 
 .card-figure {
+
   height: 100%;
   // padding-bottom: 100%;
 
   img {
     object-fit: cover;
-    width: 100%;
     height: auto;
   }
 
@@ -34,9 +34,24 @@
   max-height: 200px;
 }
 
-.card-img-top {
-  object-fit: cover;
-  object-position: center;
+.card-img-top {}
+
+.card-image {
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+
+  img {
+    object-position: center;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    user-select: none;
+    width: 100%;
+  }
 }
 
 %card-overlay {
@@ -57,7 +72,8 @@
 }
 
 %linear-brown {
-  background: linear-gradient(0deg, rgba(29, 29, 27, 1) 0%, rgba(29, 29, 27, 0.9500175070028011) 32%, rgba(29, 29, 27, 0.37298669467787116) 80%, rgba(29, 29, 27, 0) 100%);
+  background: linear-gradient(0deg, rgba(29, 29, 27, 0.4990371148459384) 0%, rgba(29, 29, 27, 0) 100%);
+
 }
 
 

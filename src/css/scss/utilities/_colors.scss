@@ -45,8 +45,13 @@
 .bg-brown {
   background-color: $brown;
 }
+
 .bg-brown-light {
   background-color: #252523;
+}
+
+.bg-gradient-black {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5046393557422969) 0%, rgba(0, 0, 0, 0.5634628851540616) 100%);
 }
 
 /* ---------- text colors Alias ---------- */
@@ -72,8 +77,8 @@
 }
 
 /* for blue light heading color */
-.text-blue-light-heading {
-  color: $blue-light;
+.text-yellow-heading {
+  color: $yellow;
 }
 
 /* for dark content color */

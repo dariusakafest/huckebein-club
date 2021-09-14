@@ -3,7 +3,7 @@
     <!-- Header -->
     <header-image class="home-header" minHeight="100vh" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="brown">
       <template #background>
-        <div ref="carouselSlide" class="carousel slide" data-bs-ride="carousel">
+        <div ref="carouselSlide" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block h-100" src="https://i.postimg.cc/Ls1QDjYH/70850018-2721181141245950-5741574919095844864-n.jpg" alt="Cover of DK on 12th Isle">
@@ -22,17 +22,15 @@
       </template>
     </header-image>
     <!--  -->
-
-    <!-- Gallery Section -->
-    <Gallery />
-    <!--  -->
-
-    <!-- Tuor Section -->
-    <Tour />
-    <!--  -->
+    <div class="bg-gradient-black pb-5">
+      <!-- Gallery Section -->
+      <Gallery />
+      <!-- Tuor Section -->
+      <Tour />
+    </div>
 
     <!-- Newsletter Section -->
-    <Newsletter class="my-5" />
+    <Newsletter />
     <!--  -->
 
     <!-- Contact us Section -->
@@ -63,7 +61,7 @@ export default {
 	},
 	data() {
 		return {
-			carousel: null,
+			carousel: null
 		};
 	},
 	mounted() {

@@ -6,7 +6,7 @@
           <div class="col-xl-8 col-lg-7 mb-4 align-self-end">
             <h1 class="h1 text-white-heading">{{event.date.month}}, {{event.date.day}} </h1>
             <h1 class="h1 text-white-heading">{{event.date.time}}</h1>
-            <button-base class="mt-4 py-3" :color="'yellow'" :uppercase="true" :radius="true" title="Join us on Facebook" />
+            
           </div>
           <div class="col-xl-4 col-lg-5 mb-4">
             <card-container class="bg-brown-light" :boxShadow="'large'" :radius="'large'" :textAlign="'start'">
@@ -18,10 +18,12 @@
         </div>
       </template>
     </header-image>
-    <section class="event-program my-5 py-5">
-      <div class="container-fluid">
-        <h2 class="h2 text-white-heading mb-4">Event program</h2>
-        <event-timeline :timeline="event.timeline"></event-timeline>
+    <section class="event-infos bg-gradient-black py-5">
+      <div class="container">
+        <h2 class="h2 text-white-heading mb-4">About Event</h2>
+        <p class="f3 text-white-content">Endlich ist es wieder so weit... wir öffnen wieder unsere Tore! Wann und wie? Das geben wir am Sonntag den 19.09. in einem LIVE Stream um 20 Uhr bekannt!</p>
+        <p class="f3 text-white-content">Ausserdem spielt DJ Stargate ein fettes zwei Stunden DJ-Set für euch um die Vorfreude weiter zu steigern.</p>
+        <button-base class="mt-4 py-3" :color="'yellow'" :uppercase="true" :radius="true" title="Join us on Facebook" />
       </div>
     </section>
 
@@ -36,16 +38,13 @@ import ButtonBase from "@/components/base/buttons/ButtonBase";
 import HeaderImage from "@/components/base/header/HeaderImage";
 import Ticket from "@/components/ticket-system/Ticket";
 
-import EventTimeline from "@/components/events/event-preview/EventTimeline";
-
 export default {
 	name: "event-preview",
 	components: {
 		CardContainer,
 		ButtonBase,
 		HeaderImage,
-		Ticket,
-		EventTimeline
+		Ticket
 	},
 	computed: {
 		...mapGetters({

@@ -7,37 +7,55 @@ const routes = [{
     path: "/",
     name: "Home",
     component: () =>
-      import( /* webpackChunkName: "seat" */ "../views/Home.vue"),
+      import( /* webpackChunkName: "Home" */ "../views/Home.vue"),
   },
   {
     path: "/about",
-    name: "About",
+    name: "about",
     component: () =>
-      import( /* webpackChunkName: "seat" */ "../views/About.vue"),
+      import( /* webpackChunkName: "About" */ "../views/About.vue"),
+  },
+  {
+    path: "/galerie",
+    name: "galerie",
+    component: () =>
+      import( /* webpackChunkName: "About" */ "../views/Galerie.vue"),
   },
   {
     path: "/seat",
     name: "seat",
     component: () =>
-      import( /* webpackChunkName: "seat" */ "../views/Seat.vue"),
+      import( /* webpackChunkName: "Seat" */ "../views/Seat.vue"),
   },
   {
-    path: "/tickt-options",
-    name: "tickt-options",
+    path: "/firmenfeiern",
+    name: "firmenfeiern",
     component: () =>
-      import( /* webpackChunkName: "seat" */ "../views/TicktOptions.vue"),
+      import( /* webpackChunkName: "Firmenfeiern" */ "../views/Firmenfeiern.vue"),
+  },
+  {
+    path: "/anfahrt-kontakt",
+    name: "anfahrt-kontakt",
+    component: () =>
+      import( /* webpackChunkName: "AnfahrtKontakt" */ "../views/AnfahrtKontakt.vue"),
+  },
+  {
+    path: "/impressum",
+    name: "impressum",
+    component: () =>
+      import( /* webpackChunkName: "Impressum" */ "../views/Impressum.vue"),
   },
   {
     path: "/payment",
     name: "payment",
     component: () =>
-      import( /* webpackChunkName: "seat" */ "../views/Payment.vue"),
+      import( /* webpackChunkName: "Payment" */ "../views/Payment.vue"),
   },
   {
     path: "/events",
     name: "events",
     component: () =>
-      import( /* webpackChunkName: "event-preview" */ "../views/Events.vue"),
+      import( /* webpackChunkName: "Events" */ "../views/Events.vue"),
   },
   {
     path: "/event/:id",

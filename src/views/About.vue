@@ -4,15 +4,18 @@
     <header-image backgroundImage="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg" minHeight="550px" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="base">
       <!--  -->
     </header-image>
-    <!-- About us Section -->
-    <AboutUs />
-    <!--  -->
-    <!-- Tour Section -->
-    <Tour class="my-5" />
-    <!--  -->
-    <!-- Contact us Section -->
-    <ContactUs class="my-5" />
-    <!--  -->
+    <div class="bg-gradient-black pb-5">
+
+      <!-- About us Section -->
+      <AboutUs />
+      <!--  -->
+      <!-- Tour Section -->
+      <Tour class="my-5" />
+      <!--  -->
+      <!-- Contact us Section -->
+      <ContactUs class="my-5" />
+      <!--  -->
+    </div>
   </div>
 
 </template>

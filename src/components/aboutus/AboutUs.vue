@@ -1,5 +1,5 @@
 <template>
-  <section class="about-card d-flex justify-content-center flex-row position-relative mt-5">
+  <section class="about-card d-flex justify-content-center flex-row position-relative pt-5">
     <div class="card-img-left move-right border-radius-large overflow-hidden">
       <img class="d-block h-100" src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-02-900x500.jpg" alt="">
     </div>

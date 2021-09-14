@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-us pb-5 mt-5">
+  <section class="contact-us pb-5">
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-xl-6 col-lg-7">

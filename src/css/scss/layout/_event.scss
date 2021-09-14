@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.event-card {
+  // min-height: 526px;
+}
+
 .ticket-content {
   position: relative;
   z-index: 1;
@@ -25,6 +29,20 @@
   top: 50%;
   left: -20%;
   transform: translateY(-50%);
+}
+
+
+.google-map {
+  iframe {
+    height: 400px;
+    width: 100% !important;
+    min-height: inherit;
+    min-width: inherit;
+  }
+}
+
+.gallery-block {
+  // background: linear-gradient(0deg, rgba(29, 29, 27, 0.16290266106442575) 0%, rgba(29, 29, 27, 0.8) 100%);
 }
 
 

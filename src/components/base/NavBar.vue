@@ -15,41 +15,38 @@
       <div class="navbar-collapse collapse" ref="collapse">
 
         <ul class="navbar-nav me-auto">
-          <li class="nav-item hover-item rounded">
-            <router-link to="/" class="nav-item hover-item rounded" exact>
-              <span class="nav-link">
-                STARTSEITE
-              </span>
-            </router-link>
-          </li>
-          <li class="nav-item hover-item rounded">
-            <router-link to="/about" class="nav-item hover-item rounded">
-              <span class="nav-link">
-                ÜBER UNS
-              </span>
-            </router-link>
-          </li>
 
+          <router-link to="/" class="nav-item hover-item rounded" exact>
+            <span class="nav-link">
+              STARTSEITE
+            </span>
+          </router-link>
+          <router-link to="/about" class="nav-item hover-item rounded">
+            <span class="nav-link">
+              ÜBER UNS
+            </span>
+          </router-link>
           <router-link to="/events" class="nav-item hover-item rounded">
             <span class="nav-link">
               Events
             </span>
           </router-link>
-          <li class="nav-item hover-item rounded">
-            <a class="nav-link" href="" data-scroll="contact" data-localize="menu.contact">
+          <router-link to="/galerie" class="nav-item hover-item rounded">
+            <span class="nav-link">
               GALERIE
-            </a>
-          </li>
-          <li class="nav-item hover-item rounded">
-            <a class="nav-link" href="">
+            </span>
+          </router-link>
+          <router-link to="/firmenfeiern" class="nav-item hover-item rounded">
+            <span class="nav-link">
               FIRMENFEIERN
-            </a>
-          </li>
-          <li class="nav-item hover-item rounded">
-            <a class="nav-link" href="">
+            </span>
+          </router-link>
+          <router-link to="/anfahrt-kontakt" class="nav-item hover-item rounded">
+            <span class="nav-link">
               ANFAHRT
-            </a>
-          </li>
+            </span>
+          </router-link>
+
         </ul>
 
         <!-- <div class="d-flex flex-lg-row flex-md-column col-md-reverse">

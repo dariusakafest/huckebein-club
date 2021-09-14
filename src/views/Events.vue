@@ -1,5 +1,5 @@
 <template>
-  <div class="events pt-120">
+  <div class="events bg-gradient-black pt-120">
     <div class="container">
       <h2 class="h2 text-white-heading text-center uppercase mb-4 mt-4">all events</h2>
       <div class="row">

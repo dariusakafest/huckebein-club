@@ -1,9 +1,28 @@
 <template>
   <div class="footer">
+
     <div class="footer-wrap">
+      <section class="opening-hours-section border-top bg-brown-light">
+        <div class="container">
+          <div class="card-content pt-4 pb-3">
+            <div class="p-4">
+              <h3 class="h3 text-white-heading text-center">ÖFFNUNGSZEITEN</h3>
+              <h4 class="h4 text-white-content text-center mb-4 mt-3">
+                Das Huckebein ist am Freitag, am Samstag und vor Feiertagen ab 22 Uhr geöffnet.</h4>
+            </div>
+          </div>
+        </div>
+      </section>
       <div class="footer-bottom py-5">
         <div class="container">
-          <div class="footer-content d-flex justify-content-center">
+          <div class="footer-content d-flex justify-content-between">
+            <ul class="navbar-nav footer-links mb-0">
+              <router-link to="/impressum" class="nav-item" exact>
+                <span class="nav-link">
+                  impressum
+                </span>
+              </router-link>
+            </ul>
             <div class="social-networks-wrapper">
               <a class="facebook-icon" href="https://www.facebook.com/Club.Huckebein/" title="Facebook" aria-label="Facebook">
                 <span class="sm-icon">

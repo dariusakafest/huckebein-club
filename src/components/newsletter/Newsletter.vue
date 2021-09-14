@@ -1,9 +1,9 @@
 <template>
-  <div class="newsletter">
+  <div class="newsletter bg-brown-light">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <card-container class="bg-brown-light" :radius="'large'" :textAlign="'center'">
+          <card-container class="bg-transparent" :radius="'large'" :textAlign="'center'">
             <template #body>
               <div class="py-4">
                 <h2 class="h2 mb-4 text-white-heading text-md-center text-sm-start">Subscribe to receive new offers and events</h2>

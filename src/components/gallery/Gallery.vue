@@ -1,5 +1,5 @@
 <template>
-  <section class="gallery-block py-5 mb-5 mt-2">
+  <section class="gallery-block py-5 mb-5">
     <div class="container-lg-fluid container-sm">
       <h1 class="h1 text-white-heading text-center uppercase mb-4">
         GALERIE
@@ -74,7 +74,6 @@ export default {
 .swiper-container {
 	height: auto !important;
 }
-
 .swiper-slide {
 	width: 60%;
 	border-radius: 12px;
