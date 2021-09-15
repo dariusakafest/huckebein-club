@@ -5,7 +5,7 @@
         GALERIE
       </h1>
       <div class="row justify-content-center">
-        <div class="col-lg-8 px-0">
+        <div class="col-xl-8 col-lg-10 px-lg-0">
 
           <swiper ref="swiper" class="swiper" :options="swiperOption">
             <swiper-slide v-for="(slide, index) in slides" :key="index">
