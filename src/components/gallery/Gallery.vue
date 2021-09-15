@@ -1,21 +1,25 @@
 <template>
   <section class="gallery-block py-5 mb-5">
-    <div class="container-lg-fluid container-sm">
-      <h1 class="h1 text-white-heading text-center uppercase mb-4">
+    <div class="container">
+      <h1 class="h1 text-white-heading text-center uppercase mb-4 mt-5">
         GALERIE
       </h1>
-      <swiper ref="swiper" class="swiper" :options="swiperOption">
-        <swiper-slide v-for="(slide, index) in slides" :key="index">
-          <img :src="slide" alt="Cover of DK on 12th Isle">
-        </swiper-slide>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 px-0">
 
-        <template v-slot:button-prev>
-          <div class="swiper-button-prev" @click="slidePrev()"></div>
-        </template>
-        <template v-slot:button-next>
-          <div class="swiper-button-next" @click="slideNext()"></div>
-        </template>
-      </swiper>
+          <swiper ref="swiper" class="swiper" :options="swiperOption">
+            <swiper-slide v-for="(slide, index) in slides" :key="index">
+              <img :src="slide" alt="Cover of DK on 12th Isle">
+            </swiper-slide>
+            <template v-slot:button-prev>
+              <div class="swiper-button-prev" @click="slidePrev()"></div>
+            </template>
+            <template v-slot:button-next>
+              <div class="swiper-button-next" @click="slideNext()"></div>
+            </template>
+          </swiper>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -50,7 +54,7 @@ export default {
 				},
 				breakpoints: {
 					1000: {
-						slidesPerView: 2
+						slidesPerView: 1
 					},
 					760: {
 						slidesPerView: 1

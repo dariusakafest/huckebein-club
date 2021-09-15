@@ -6,9 +6,9 @@
         <div class="container">
           <div class="card-content pt-4 pb-3">
             <div class="p-4">
-              <h3 class="h3 text-white-heading text-center">ÖFFNUNGSZEITEN</h3>
+              <h3 class="h3 text-white-heading text-center uppercase">Öffnungszeiten</h3>
               <h4 class="h4 text-white-content text-center mb-4 mt-3">
-                Das Huckebein ist am Freitag, am Samstag und vor Feiertagen ab 22 Uhr geöffnet.</h4>
+                Freitag, Samstag und vor Feiertagen ab 22 Uhr.</h4>
             </div>
           </div>
         </div>

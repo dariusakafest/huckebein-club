@@ -1,155 +1,171 @@
 <template>
-  <div class="p-page seate-page">
+  <div class="p-page seate-page bg-brown">
     <div class="seats-map">
+      <div>
 
-      <v-stage class="canvas-seat-map" :config="configKonva">
-        <!-- <v-layer ref="layer">
-          <v-image :config="{
-            image: image
-          }" />
-        </v-layer> -->
+        <v-stage class="canvas-seat-map" id="container" :config="configKonva">
+          <!-- <v-layer ref="layer">
+            <v-image :config="{
+              image: image
+            }" />
+          </v-layer> -->
 
-        <v-layer>
-          <v-group v-for="(item, index) in seats" :key="item.id" @click="selectedSeate(index)" @touchstart="selectedSeate(index)">
-            <template v-if="item.glass == true">
+          <v-layer>
+            <v-group v-for="(item, index) in seats" :key="item.id" @click="selectedSeate(index)" @tap="selectedSeate(index)">
+              <template v-if="item.glass == true">
 
-              <v-rect ref="rect" :config="{
-                  width: 10,
-                  height: item.height,
-                  x: (item.x - 50),
-                  y: item.y,
-                  id: item.id,
-                  fill: '#ea2424',
-                  cornerRadius: 12,
-                  }"></v-rect>
-            </template>
+                <v-rect ref="rect" :config="{
+                    width: 10,
+                    height: item.height,
+                    x: (item.x - 50),
+                    y: item.y,
+                    id: item.id,
+                    fill: '#ea2424',
+                    cornerRadius: 12,
+                    }"></v-rect>
+              </template>
 
-            <template v-if="item.shape == 'rect'">
+              <template v-if="item.shape == 'rect'">
 
-              <v-rect ref="rect" :config="{
-                  width: item.width,
-                  height: item.height,
+                <v-rect ref="rect" :config="{
+                    width: item.width,
+                    height: item.height,
+                    x: item.x,
+                    y: item.y,
+                    id: item.id,
+                    fill: item.fill,
+                    stroke: item.stroke,
+                    cornerRadius: 12,
+                    selectedSeate: item.selectedSeate,
+                    type: item.type,
+                    shape: item.shape,
+                    glass: item.glass,
+                    }"></v-rect>
+
+                <v-text :config="{
+                  text: item.name,
                   x: item.x,
                   y: item.y,
-                  id: item.id,
+                  width: item.width,
+                  height: item.height,
+                  fontSize: 17,
+                  fill: item.text_fill,
+                  align: 'center',
+                  verticalAlign: 'middle'
+                  }">
+
+                </v-text>
+              </template>
+
+              <template v-if="item.shape == 'path'">
+
+                <v-path :config="{
+                  x: item.x,
+                  y: item.y,
                   fill: item.fill,
+                  shape: item.shape,
+                  data: item.data
+                  }
+                " />
+
+                <v-text :config="{
+                  text: item.name,
+                  x: item.x,
+                  y: (item.y + 18),
+                  width: item.width,
+                  height: item.height,
+                  fontSize: 17,
+                  fill: item.text_fill,
+                  align: 'center',
+                  verticalAlign: 'middle'
+                  }">
+
+                </v-text>
+
+              </template>
+              <template v-if="item.shape == 'line'">
+
+                <v-line :config="{
+                  points: item.points,
+                  x: item.x,
+                  y: item.y,
                   stroke: item.stroke,
-                  cornerRadius: 12,
-                  selectedSeate: item.selectedSeate,
-                  type: item.type,
                   shape: item.shape,
-                  glass: item.glass,
-                  }"></v-rect>
+                 strokeWidth: item.strokeWidth,
+                 dash: item.dash
+                  }
+                " />
 
-              <v-text :config="{
-                text: item.name,
-                x: item.x,
-                y: item.y,
-                width: item.width,
-                height: item.height,
-                fontSize: 17,
-                fill: item.text_fill,
-                align: 'center',
-                verticalAlign: 'middle'
-                }">
+              </template>
 
-              </v-text>
-            </template>
+              <template v-if="item.type == 'text'">
 
-            <template v-if="item.shape == 'path'">
-
-              <v-path :config="{
-                x: item.x,
-                y: item.y,
-                fill: item.fill,
-                shape: item.shape,
-                data: item.data
-                }
-              " />
-
-              <v-text :config="{
-                text: item.name,
-                x: item.x,
-                y: (item.y + 18),
-                width: item.width,
-                height: item.height,
-                fontSize: 17,
-                fill: item.text_fill,
-                align: 'center',
-                verticalAlign: 'middle'
-                }">
-
-              </v-text>
-
-            </template>
-
-            <template v-if="item.type == 'text'">
-
-              <v-text :config="{
-                text: item.name,
-                x: item.x,
-                y: (item.y + 18),
-                width: item.width,
-                height: item.height,
-                fontSize: 17,
-                fill: item.text_fill,
-                align: 'center',
-                verticalAlign: 'middle'
-                }">
-
-              </v-text>
-
-            </template>
-
-            <template v-if="item.shape == 'circle'">
-
-              <v-circle ref="circle" :config="{
+                <v-text :config="{
+                  text: item.name,
+                  x: item.x,
+                  y: (item.y + 18),
                   width: item.width,
                   height: item.height,
+                  fontSize: 17,
+                  fill: item.text_fill,
+                  align: 'center',
+                  verticalAlign: 'middle'
+                  }">
+
+                </v-text>
+
+              </template>
+
+              <template v-if="item.shape == 'circle'">
+
+                <v-circle ref="circle" :config="{
+                    width: item.width,
+                    height: item.height,
+                    x: item.x,
+                    y: item.y,
+                    id: item.id,
+                    fill: item.fill,
+                    selectedSeate: item.selectedSeate,
+                    type: item.type,
+                    shape: item.shape,
+                    glass: item.glass
+                    }"></v-circle>
+
+                <v-text :config="{
+                  text: item.name,
+                  x: item.x,
+                  y: item.y,
+                  width: item.width,
+                  height: item.height,
+                  fontSize: 14,
+                  fill: item.text_fill,
+                  offsetX: 8, 
+                  offsetY: 5 
+                  }">
+
+                </v-text>
+              </template>
+
+              <v-circle v-for="(chair, index) in item.chairs" :key="index" :config="{
+                  width: chair.width,
+                  height: chair.height,
                   x: item.x,
                   y: item.y,
                   id: item.id,
-                  fill: item.fill,
-                  selectedSeate: item.selectedSeate,
-                  type: item.type,
-                  shape: item.shape,
-                  glass: item.glass
+                  fill: '#eabf24',
+                  offsetY: chair.top,
+                  offsetX: chair.left,
                   }"></v-circle>
 
-              <v-text :config="{
-                text: item.name,
-                x: item.x,
-                y: item.y,
-                width: item.width,
-                height: item.height,
-                fontSize: 14,
-                fill: item.text_fill,
-                offsetX: 8, 
-                offsetY: 5 
-                }">
-
-              </v-text>
-            </template>
-
-            <v-circle v-for="chair in item.chairs" :key="chair.number" :config="{
-                width: chair.width,
-                height: chair.height,
-                x: item.x,
-                y: item.y,
-                id: item.id,
-                fill: '#eabf24',
-                offsetY: chair.top,
-                offsetX: chair.left,
-                }"></v-circle>
-
-          </v-group>
-        </v-layer>
-      </v-stage>
+            </v-group>
+          </v-layer>
+        </v-stage>
+      </div>
     </div>
 
-    <div class="offcanvas offcanvas-end" ref="seatFormOffcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas bg-brown-light offcanvas-end" ref="seatFormOffcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
-        <h5 class="h3" id="offcanvasRightLabel">Book your table</h5>
+        <h5 class="h3 text-white-heading" id="offcanvasRightLabel">Book your table</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" @click="unSelectSeate(seatForm)"></button>
       </div>
 
@@ -157,20 +173,19 @@
 
         <div class="seat-form text-start">
           <div class="mb-3">
-
-            <h3 class="h3 text-dark-headi">
+            <h3 class="h3 text-white-heading">
               {{seatForm.name}}
             </h3>
           </div>
 
           <div class="mb-3 border-top pt-3">
-            <label for="exampleFormControlInput3" class="form-label">When will you come?</label>
+            <label for="exampleFormControlInput3" class="form-label text-white-heading">When will you come?</label>
             <input type="datetime-local" class="form-control" id="exampleFormControlInput3">
           </div>
 
           <template v-if="seatForm.chairs">
             <div class="mb-3">
-              <label for="exampleFormControlInput2" class="form-label">Frindes</label>
+              <label for="exampleFormControlInput2" class="form-label text-white-heading">Frindes</label>
               <select class="form-select" id="exampleFormControlInput2" aria-label="Default select example">
                 <option v-for="chair in seatForm.chairs" :key="chair.number"> {{chair.number}} </option>
               </select>
@@ -179,18 +194,18 @@
 
           <div class="form-check mb-3">
             <input class="form-check-input" type="checkbox" id="flexCheckDefault" v-model="seatForm.haveOccasion">
-            <label class="form-check-label" for="flexCheckDefault">
+            <label class="form-check-label text-white-heading" for="flexCheckDefault">
               Do you have an occasion?
             </label>
           </div>
 
           <template v-if="seatForm.haveOccasion">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">What is the occasion?</label>
+              <label for="exampleInputEmail1" class="form-label text-white-heading">What is the occasion?</label>
               <input type="email" class="form-control" placeholder="EX: Birthday" id="exampleInputEmail1">
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Do you have any ideas for this occasion?</label>
+              <label for="exampleFormControlTextarea1" class="form-label text-white-heading">Do you have any ideas for this occasion?</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
             </div>
           </template>
@@ -235,8 +250,10 @@ export default {
 			selected: false,
 			seatForm: {},
 			configKonva: {
+				container: "container",
 				width: w_width,
-				height: w_height
+				height: w_height,
+				draggable: true
 			},
 			configCircle: {
 				x: 100,

@@ -42,7 +42,8 @@
 }
 
 .gallery-block {
-  // background: linear-gradient(0deg, rgba(29, 29, 27, 0.16290266106442575) 0%, rgba(29, 29, 27, 0.8) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 91%, rgba(29, 29, 27, 1) 97%);
+
 }
 
 
@@ -60,25 +61,15 @@
 
 
 
-.seats-map {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  overflow: hidden;
-  // width: 100%;
-}
+.event-card-wrap {
+  &:first-of-type {
+    margin-right: 14px;
 
-.canvas-seat-map {
-  // background-image: url(../assets/map-bg.svg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: auto;
-  height: 741px;
+  }
 
+  &:last-of-type {
+    margin-left: 14px;
 
-  canvas {
-    cursor: pointer;
   }
 }
 

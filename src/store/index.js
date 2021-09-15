@@ -297,7 +297,7 @@ export default new Vuex.Store({
       },
     ],
     seats: [{
-        id: 347999,
+        id: "w1",
         x: 16,
         y: 40,
         width: 340,
@@ -309,7 +309,7 @@ export default new Vuex.Store({
         enableToSelect: false
       },
       {
-        id: 124,
+        id: "w2",
         x: 95,
         y: 125,
         width: 40,
@@ -358,7 +358,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 25,
+        id: "w3",
         x: 241,
         y: 125,
         width: 40,
@@ -407,7 +407,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 1,
+        id: "w4",
         x: 375,
         y: 78,
         width,
@@ -456,7 +456,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 2,
+        id: "w5",
         x: 520,
         y: 78,
         width: width,
@@ -505,7 +505,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 34,
+        id: "w6",
         x: 619,
         y: 78,
         width: width,
@@ -517,7 +517,7 @@ export default new Vuex.Store({
         enableToSelect: false
       },
       {
-        id: 3,
+        id: "w7",
         x: 720,
         y: 78,
         width: width,
@@ -566,7 +566,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 234,
+        id: "w8",
         x: 865,
         y: 78,
         width: width,
@@ -615,7 +615,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 235,
+        id: "w9",
         x: 1005,
         y: 78,
         width: width,
@@ -664,7 +664,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 35,
+        id: "a0",
         x: 1100,
         y: 78,
         width: width,
@@ -694,7 +694,7 @@ export default new Vuex.Store({
       },
       // BAR B
       {
-        id: 144,
+        id: "a1",
         x: 82,
         y: 275,
         text_fill: "#fff",
@@ -702,7 +702,7 @@ export default new Vuex.Store({
         type: "text"
       },
       {
-        id: 40,
+        id: "a2",
         x: 75,
         y: 325,
         width: 20,
@@ -717,7 +717,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 115,
+        id: "a3",
         x: 110,
         y: 325,
         width: 20,
@@ -733,7 +733,7 @@ export default new Vuex.Store({
       },
       //
       {
-        id: 2335,
+        id: "a4",
         x: 416,
         y: 280,
         width: width,
@@ -774,7 +774,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 23235,
+        id: "a5",
         x: 416,
         y: 431,
         width: width,
@@ -831,14 +831,14 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 1235,
+        id: "a6",
         x: 504,
         y: 431,
         width: width,
         height: height,
         fill,
         text_fill,
-        name: "T17",
+        name: "T16",
         type: "bar",
         shape: "rect",
         haveOccasion: false,
@@ -887,8 +887,10 @@ export default new Vuex.Store({
           }
         ]
       },
+
+
       {
-        id: 1135,
+        id: "a7",
         x: 692,
         y: 290,
         width: 100,
@@ -953,7 +955,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 1135,
+        id: "a8",
         x: 863,
         y: 290,
         width: 100,
@@ -1018,7 +1020,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 1136,
+        id: "a9",
         x: 637,
         y: 485,
         width: 100,
@@ -1083,7 +1085,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 1336,
+        id: "s0",
         x: 863,
         y: 485,
         width: 100,
@@ -1148,7 +1150,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 2235,
+        id: "s1",
         x: 60,
         y: 490,
         width: width,
@@ -1189,7 +1191,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 8235,
+        id: "s2",
         x: 60,
         y: 610,
         width: width,
@@ -1230,7 +1232,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 81235,
+        id: "s3",
         x: 218,
         y: 642,
         width: 130,
@@ -1312,7 +1314,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 61235,
+        id: "s4",
         x: 461,
         y: 610,
         width: width,
@@ -1369,7 +1371,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 6295,
+        id: "s5",
         x: 600,
         y: 610,
         width: width,
@@ -1441,7 +1443,7 @@ export default new Vuex.Store({
         glass: true
       },
       {
-        id: 2323235,
+        id: "s6",
         x: 789,
         y: 670,
         width: 40,
@@ -1490,7 +1492,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 23213235,
+        id: "s7",
         x: 1035,
         y: 670,
         width: 40,
@@ -1539,7 +1541,7 @@ export default new Vuex.Store({
         ]
       },
       {
-        id: 337,
+        id: "s8",
         x: 1170,
         y: 313,
         data: "M 37.92971801757812 1 L 1.000030517578125 28.26272583007812 L 1 196.4422454833984 L 38.00079345703125 231.7089385986328 L 177.4779815673828 231.7089385986328 L 177.4779815673828 376.6683349609375 L 252.6123199462891 376.6683349609375 L 252.6123199462891 231.7089385986328 L 392.1436767578125 231.7089385986328 L 429.1445007324219 196.4423522949219 L 429.14453125 28.26272583007812 L 392.2148132324219 1 L 37.92971801757812 1 M 37.6005859375 0 L 392.5439453125 0 L 430.14453125 27.75799560546875 L 430.1445007324219 196.8707275390625 L 392.5439453125 232.7089385986328 L 253.6123199462891 232.7089385986328 L 253.6123199462891 377.6683349609375 L 176.4779815673828 377.6683349609375 L 176.4779815673828 232.7089385986328 L 37.60055541992188 232.7089385986328 L 0 196.87060546875 L 3.0517578125e-05 27.75799560546875 L 37.6005859375 0 Z",
@@ -1554,7 +1556,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 6295,
+        id: 's9',
         x: 1200,
         y: 345,
         width: 370,
@@ -1570,7 +1572,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 144666,
+        id: 's10',
         x: 1105,
         y: 400,
         text_fill: "#fff",
@@ -1578,7 +1580,7 @@ export default new Vuex.Store({
         type: "text"
       },
       {
-        id: 4421220,
+        id: 'd0',
         x: 1147,
         y: 390,
         width: 20,
@@ -1593,7 +1595,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 44210,
+        id: 'd1',
         x: 1147,
         y: 425,
         width: 20,
@@ -1608,7 +1610,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 44210,
+        id: 'd2',
         x: 1147,
         y: 460,
         width: 20,
@@ -1623,7 +1625,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 123144,
+        id: 'd3',
         x: 1640,
         y: 400,
         text_fill: "#fff",
@@ -1631,7 +1633,7 @@ export default new Vuex.Store({
         type: "text"
       },
       {
-        id: 29544210,
+        id: 'd4',
         x: 1622,
         y: 390,
         width: 20,
@@ -1646,7 +1648,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 24264610,
+        id: 'd5',
         x: 1622,
         y: 425,
         width: 20,
@@ -1661,7 +1663,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 24423210,
+        id: 'd6',
         x: 1622,
         y: 460,
         width: 20,
@@ -1676,7 +1678,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 12314634,
+        id: 'd7',
         x: 1272,
         y: 235,
         text_fill: "#fff",
@@ -1699,7 +1701,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 24264699910,
+        id: 'd8',
         x: 1282,
         y: 290,
         width: 20,
@@ -1714,7 +1716,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 10244232010,
+        id: 'd9',
         x: 1312,
         y: 290,
         width: 20,
@@ -1729,7 +1731,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 1231463455,
+        id: "f0",
         x: 1472,
         y: 235,
         text_fill: "#fff",
@@ -1737,7 +1739,7 @@ export default new Vuex.Store({
         type: "text"
       },
       {
-        id: 2954427324610,
+        id: "f1",
         x: 1452,
         y: 290,
         width: 20,
@@ -1752,7 +1754,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 24264699645910,
+        id: "f2",
         x: 1482,
         y: 290,
         width: 20,
@@ -1767,7 +1769,7 @@ export default new Vuex.Store({
         selectedSeate: false
       },
       {
-        id: 36510244232010743,
+        id: "f3",
         x: 1512,
         y: 290,
         width: 20,
@@ -1780,7 +1782,112 @@ export default new Vuex.Store({
         glass: false,
         enableToSelect: true,
         selectedSeate: false
-      }
+      },
+      // wake lines
+      {
+        id: "line1",
+        points: [860, 0, 0, 0, 0, 0],
+        x: 347,
+        y: 222,
+        strokeWidth: 1,
+        stroke: '#707070',
+        type: "walk-line",
+        shape: "line",
+        dash: [10],
+        enableToSelect: true,
+        selectedSeate: false,
+      },
+      {
+        id: "line2",
+        points: [0, 356, 0, 0, 0, 0],
+        x: 347,
+        y: 222,
+        strokeWidth: 1,
+        stroke: '#707070',
+        type: "walk-line",
+        shape: "line",
+        dash: [10],
+        enableToSelect: true,
+        selectedSeate: false,
+      },
+      {
+        id: "line3",
+        points: [710, 0, 0, 0, 0, 0],
+        x: 347,
+        y: 590,
+        strokeWidth: 1,
+        stroke: '#707070',
+        type: "walk-line",
+        shape: "line",
+        dash: [10],
+        enableToSelect: true,
+        selectedSeate: false,
+      },
+      {
+        id: "line4",
+        points: [0, 180, 0, 0, 0, 0],
+        x: 603,
+        y: 400,
+        strokeWidth: 1,
+        stroke: '#707070',
+        type: "walk-line",
+        shape: "line",
+        dash: [10],
+        enableToSelect: true,
+        selectedSeate: false,
+      },
+      {
+        id: "line5",
+        points: [51, 0, 0, 0, 0, 0],
+        x: 603,
+        y: 400,
+        strokeWidth: 1,
+        stroke: '#707070',
+        type: "walk-line",
+        shape: "line",
+        dash: [10],
+        enableToSelect: true,
+        selectedSeate: false,
+      },
+      {
+        id: "line6",
+        points: [51, 0, 0, 0, 0, 0],
+        x: 603,
+        y: 400,
+        strokeWidth: 1,
+        stroke: '#707070',
+        type: "walk-line",
+        shape: "line",
+        dash: [10],
+        enableToSelect: true,
+        selectedSeate: false,
+      },
+      {
+        id: "line7",
+        points: [0, 166, 0, 0, 0, 0],
+        x: 665,
+        y: 230,
+        strokeWidth: 1,
+        stroke: '#707070',
+        type: "walk-line",
+        shape: "line",
+        dash: [10],
+        enableToSelect: true,
+        selectedSeate: false,
+      },
+      {
+        id: "line8",
+        points: [0, 549, 0, 0, 0, 0],
+        x: 1094,
+        y: 232,
+        strokeWidth: 1,
+        stroke: '#707070',
+        type: "walk-line",
+        shape: "line",
+        dash: [10],
+        enableToSelect: true,
+        selectedSeate: false,
+      },
     ],
   },
   getters: {

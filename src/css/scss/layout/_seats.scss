@@ -1,8 +1,30 @@
 .seate-page {
   // height: 500px;
+  overflow: hidden;
+}
 
+.canvas-seat-map {}
+
+.seats-map {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+  // width: 100%;
 }
 
 .canvas-seat-map {
+  // background-image: url(../assets/map-bg.svg);
+  // background-position: top;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // width: auto;
+  // height: 741px;
   height: 780px !important;
+
+
+
+  canvas {
+    cursor: pointer;
+  }
 }
