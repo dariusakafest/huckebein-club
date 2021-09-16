@@ -2,7 +2,7 @@
   <header :style="{'background-image': `url(${backgroundImage})`, 'min-height': `${minHeight}`}" :class="[filterImage? `${filterImage}` : '', `d-${contentDisplay}`,flexAlign ? `align-items-${flexAlign}` : '', 'header-image bg-center']">
     <template v-if="overlay">
       <div :class="`card-overlay_${overlayType}`">
-        <div class="card-overlay_backgrounds">
+        <div class="card-overlay_backgrounds" id="fade_background">
           <slot name="background"></slot>
         </div>
       </div>

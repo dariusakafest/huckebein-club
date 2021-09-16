@@ -25,6 +25,17 @@
 </template>
 
 <script>
+import Vue from "vue";
+import { Swiper as SwiperClass, Autoplay } from "swiper/swiper.esm";
+import getAwesomeSwiper from "vue-awesome-swiper/dist/exporter";
+
+// Swiper modules
+// SwiperClass.use([ Autoplay])
+
+SwiperClass.use([Autoplay]);
+
+Vue.use(getAwesomeSwiper(SwiperClass));
+
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 
@@ -48,6 +59,11 @@ export default {
 				centeredSlides: false,
 				spaceBetween: 30,
 				grabCursor: true,
+				loop: true,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false
+				},
 				navigation: {
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev"

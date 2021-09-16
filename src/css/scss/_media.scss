@@ -93,6 +93,7 @@
   .home-header {
     flex-direction: column;
 
+    .card-overlay_base,
     .card-overlay_brown {
       position: relative !important;
 
@@ -102,7 +103,6 @@
         }
       }
     }
-
 
 
     .main-navbar {
@@ -116,10 +116,6 @@
 
     .upcoming-events {
       padding-top: 30px
-    }
-
-    .card-content {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.504639) 0%, rgba(0, 0, 0, 0.563463) 100%);
     }
   }
 
