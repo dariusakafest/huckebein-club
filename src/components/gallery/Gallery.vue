@@ -8,8 +8,8 @@
         <div class="col-xl-8 col-lg-10 px-lg-0">
 
           <swiper ref="swiper" class="swiper" :options="swiperOption">
-            <swiper-slide v-for="(slide, index) in slides" :key="index">
-              <img :src="slide" alt="Cover of DK on 12th Isle">
+            <swiper-slide v-for="(image, index) in gallery" :key="index">
+              <img class="img-fluid d-block" :src="setUrlImage(image)" alt="Cover of DK on 12th Isle">
             </swiper-slide>
             <template v-slot:button-prev>
               <div class="swiper-button-prev" @click="slidePrev()"></div>
@@ -26,6 +26,7 @@
 
 <script>
 import Vue from "vue";
+import { mapState } from "vuex";
 import { Swiper as SwiperClass, Autoplay } from "swiper/swiper.esm";
 import getAwesomeSwiper from "vue-awesome-swiper/dist/exporter";
 
@@ -47,14 +48,6 @@ export default {
 	},
 	data() {
 		return {
-			slides: [
-				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
-				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-03-900x500.jpg",
-				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-location-02.jpg",
-				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-02-900x500.jpg",
-				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-05-900x500.jpg",
-				"https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-location-01.jpg"
-			],
 			swiperOption: {
 				centeredSlides: false,
 				spaceBetween: 30,
@@ -79,12 +72,18 @@ export default {
 			}
 		};
 	},
+	computed: {
+		...mapState(["gallery"])
+	},
 	methods: {
 		slidePrev() {
 			return this.$refs.swiper.swiperInstance.slidePrev();
 		},
 		slideNext() {
 			return this.$refs.swiper.swiperInstance.slideNext();
+		},
+		setUrlImage(img) {
+			return require(`@/assets/${img}`);
 		}
 	}
 };
@@ -95,8 +94,14 @@ export default {
 	height: auto !important;
 }
 .swiper-slide {
-	width: 60%;
+	// width: 60%;
 	border-radius: 12px;
 	overflow: hidden;
+	img {
+		max-width: 100%;
+		height: 487px;
+		object-fit: cover;
+		object-position: bottom;
+	}
 }
 </style>

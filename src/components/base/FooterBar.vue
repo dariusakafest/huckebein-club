@@ -9,12 +9,14 @@
               <h3 class="h3 text-white-heading text-center uppercase">Öffnungszeiten</h3>
               <h4 class="h4 text-white-content text-center mb-4 mt-3">
                 Freitag, Samstag und vor Feiertagen ab 22 Uhr.</h4>
-              <h5 class="h5 text-white-content text-center mb-0">
+
+              <router-link to="/anfahrt-kontakt" class="h5 d-block text-white-content text-center mb-0">
                 <span class="sx-icon">
                   <location-icon :fill="'yellow'" />
                 </span>
                 Heidelberger Strasse 89a, 64285 Darmstadt
-              </h5>
+
+              </router-link>
             </div>
           </div>
         </div>

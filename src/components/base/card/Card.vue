@@ -1,5 +1,5 @@
 <template>
-  <div class="card event-card bg-transparent border-radius-large box-shadow-large overflow-hidden bg-center" >
+  <div class="card event-card bg-transparent border-radius-large box-shadow-large overflow-hidden bg-center">
     <div class="card-body p-0 position-relative">
       <div class="card-content w-100 h-100">
         <div class="card-image">
@@ -53,6 +53,11 @@ export default {
 		height: {
 			type: String,
 			default: () => {}
+		}
+	},
+	methods: {
+		setUrlImage(img) {
+			return require(`${img}`) || img;
 		}
 	}
 };
