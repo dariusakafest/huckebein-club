@@ -35,11 +35,11 @@
 }
 
 
-@media (prefers-reduced-motion: no-preference) {
-  #fade_background {
-    transition: mask-imag 1.5s ease,
-      transform .2s ease;
-  }
+@media (prefers-reduced-motion: no-preference) {}
+
+#fade_background {
+  transition: mask-imag 1.5s ease,
+    transform .2s ease;
 }
 
 .fadingIn {
@@ -48,7 +48,7 @@
 }
 
 .fadingOut {
-  mask-image: none
+  // mask-image: none
 }
 
 

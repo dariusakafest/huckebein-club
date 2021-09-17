@@ -11,6 +11,7 @@ import NavBar from "@/components/base/NavBar.vue";
 import FooterBar from "@/components/base/FooterBar.vue";
 
 export default {
+	name: 'app',
 	components: {
 		NavBar,
 		FooterBar
@@ -27,7 +28,8 @@ export default {
 	},
 	mounted() {
 		this.isAdmin = false;
-	}
+	},
+
 };
 </script>
 

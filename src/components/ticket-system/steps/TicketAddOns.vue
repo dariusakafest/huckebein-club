@@ -1,6 +1,5 @@
 <template>
-  <div class="ticket-add-ons d-flex flex-column justify-content-between">
-
+  <div class="ticket-add-ons d-flex flex-column justify-content-between w-100">
     <div class="mb-3">
       <div class="d-flex justify-content-between align-items-center">
         <h4 class="h4 text-white-heading mt-2">Ticket options</h4>
@@ -13,7 +12,6 @@
         <button-base @click.native="goNext()" class="h4 text-white-heading bg-brown p-4 border-hover border-radius-medium text-start" title="Or just buy an entry ticket?" />
       </div>
     </div>
-
   </div>
 
 </template>

@@ -3,7 +3,7 @@
     <!-- Header -->
     <div class="bg-gradient-black pb-5">
 
-      <header-image class="home-header " ref="homeHeader" minHeight="100vh" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="base">
+      <header-image class="home-header " minHeight="100vh" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="base">
         <template #background>
 
           <div ref="carouselSlide" class="carousel slide carousel-fade " data-bs-ride="carousel">
@@ -71,46 +71,6 @@ export default {
 	mounted() {
 		var carouselElement = this.$refs.carouselSlide;
 		this.carousel = new Carousel(carouselElement);
-
-		var homeHeader = this.$refs.homeHeader.$el;
-		var fade_background = document.getElementById("fade_background");
-
-		function fadeOutOnScroll(element) {
-			if (!element) {
-				return;
-			}
-			var distanceToTop =
-				window.pageYOffset + element.getBoundingClientRect().top;
-			var elementHeight = element.offsetHeight;
-			var scrollTop = document.documentElement.scrollTop;
-			console.log(scrollTop);
-
-			var opacity = 1;
-
-			if (scrollTop > distanceToTop) {
-				opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
-			}
-
-			if (opacity >= 0) {
-				fade_background.style.opacity = opacity;
-				fade_background.style.transform = `translateY(-${scrollTop -
-					distanceToTop / 100}px)`;
-			}
-			if (window.scrollY > 10) {
-				fade_background.classList.add("fadingIn");
-				fade_background.classList.remove("fadingOut");
-			}
-			if (window.scrollY == 0) {
-				fade_background.classList.add("fadingOut");
-				fade_background.classList.remove("fadingIn");
-			}
-		}
-
-		function scrollHandler() {
-			fadeOutOnScroll(homeHeader);
-		}
-
-		window.addEventListener("scroll", scrollHandler);
 	}
 };
 </script>

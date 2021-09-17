@@ -1,12 +1,13 @@
 <template>
   <div class="d-flex flex-column justify-content-between w-100">
     <div class="mb-4">
-      <h2 class="h2 text-white-heading mt-2">Book ticket</h2>
-    </div>
-    <div class="mb-3">
+      <h2 class="h2 text-white-heading mt-2 mb-5 uppercase">{{ticketType}}</h2>
       <personal-form fullName email/>
       <spiner-btn :max="spases" />
-      <div class="d-flex mt-3">
+    </div>
+    <div class="mb-0">
+
+      <!-- <div class="d-flex mt-3">
         <div class="ticket-item border-radius-medium flex-grow-1" :class="{'me-1': ticket.type == 'standard', 'ms-1': ticket.type == 'VIP'}" v-for="(ticket, index) in tickets" :key="index">
           <div class="ticket-content p-3">
             <h3 class="h3 text-dark-heading mb-2">{{ticket.cost}}</h3>
@@ -19,9 +20,9 @@
             <template v-if="ticket.type == 'VIP'">
               <scribbles-bg fill="white" />
             </template>
-          </div>
+          </div> 
         </div>
-      </div>
+      </div> -->
 
     </div>
     <button-base @click.native="goNext()" class="mt-4 w-100 py-3" :color="'yellow'" :uppercase="true" :radius="true" :title="'continue'" />
@@ -30,13 +31,17 @@
 
 <script>
 import ButtonBase from "@/components/base/buttons/ButtonBase";
-import ScribblesBg from "@/components/svgs/scribbles";
+// import ScribblesBg from "@/components/svgs/scribbles";
 import PersonalForm from "@/components/forms/PersonalForm";
 import SpinerBtn from "@/components/base/buttons/SpinerBtn";
 
 export default {
 	name: "ticket-info",
 	props: {
+		ticketType: {
+			type: String,
+			default: () => {}
+		},
 		title: {
 			type: String,
 			default: () => {}
@@ -68,7 +73,7 @@ export default {
 	},
 	components: {
 		PersonalForm,
-		ScribblesBg,
+		// ScribblesBg,
 		SpinerBtn,
 		ButtonBase
 	},

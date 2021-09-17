@@ -28,7 +28,7 @@ export default new Vuex.Store({
         date: {
           month: "September",
           day: "10",
-          time: '22:00 Uhr'
+          time: '11:00PM'
         },
         link: "event-preview",
         tickets: [{
@@ -79,7 +79,7 @@ export default new Vuex.Store({
         date: {
           month: "September",
           day: "10",
-          time: '22:00 Uhr'
+          time: '11:00PM'
         },
         link: "event-preview",
         tickets: [{
@@ -125,7 +125,7 @@ export default new Vuex.Store({
         date: {
           month: "September",
           day: "10",
-          time: '22:00 Uhr'
+          time: '11:00PM'
         },
         link: "event-preview",
         tickets: [{
@@ -166,7 +166,7 @@ export default new Vuex.Store({
         date: {
           month: "September",
           day: "10",
-          time: '22:00 Uhr'
+          time: '11:00PM'
         },
         link: "event-preview",
         tickets: [{
@@ -212,7 +212,7 @@ export default new Vuex.Store({
         date: {
           month: "September",
           day: "10",
-          time: '22:00 Uhr'
+          time: '11:00PM'
         },
         link: "event-preview",
         tickets: [{
@@ -258,7 +258,7 @@ export default new Vuex.Store({
         date: {
           month: "September",
           day: "10",
-          time: '22:00 Uhr'
+          time: '11:00PM'
         },
         link: "event-preview",
         tickets: [{
