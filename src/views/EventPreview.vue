@@ -3,14 +3,14 @@
     <header-image class="pb-5 pt-120" minHeight="540px" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="base">
       <template #background>
         <div class="card-image position-static">
-          <img class="img-fluid" :src="event.img" alt="" srcset="">
+          <img class="img-fluid" :src="	setUrlImage(event.img)" alt="" srcset="">
         </div>
       </template>
       <template #content>
         <div class="row">
           <div class="col-xl-8 col-lg-7 align-self-end">
             <h1 class="h1 text-gradient-yellow uppercase">Event name</h1>
-            <h1 class="h1 text-gradient-yellow uppercase mb-0">{{event.date.month}}, {{event.date.day}}, {{event.date.time}}</h1>
+            <h2 class="h2 text-gradient-yellow uppercase mb-0">{{event.date.time}} - {{event.dj}}</h2>
           </div>
           <div class="col-xl-4 col-lg-3 align-self-end">
             <div class="d-flex justify-content-end justify-content-sm-start">
@@ -24,8 +24,42 @@
     <section class="event-infos">
       <div class="container">
         <div class="py-5">
-          <p class="f3 text-white-content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-          <p class="f3 text-white-content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+          <p class="f2 text-white-content">nach Monaten des Wartens ist es bald endlich wieder soweit.❤️ Wir öffnen wieder 🥰 und am Freitag den 01.10. ist es soweit!!! Wir sind deshalb so unfassbar glücklich und können es kaum erwarten euch endlich wieder zu begrüßen und mit euch tanzen zu dürfen.</p>
+          <p class="f2 text-white-content">Um 22 Uhr öffnen wir wieder unsere Türen und freuen uns auf eine unvergessliche Nacht mit euch! 💃🏻❤️</p>
+          <div class="row">
+            <div class="col-xl-3 mb-3">
+              <card-container class="bg-brown-light h-100" :radius="'medium'" :textAlign="'start'">
+                <template #body>
+                  <div class="md-icon">
+                    <MusicalIcon />
+                  </div>
+                  <h5 class="h5 text-white-heading mb-0 mt-3">Musik: Black, House, Reggaeton, Classics aus den 90ern + 2000er</h5>
+                </template>
+              </card-container>
+            </div>
+            <div class="col-xl-3 mb-3">
+              <card-container class="bg-brown-light h-100" :radius="'medium'" :textAlign="'start'">
+                <template #body>
+                  <div class="md-icon">
+                    <EnterIcon />
+                  </div>
+                  <h5 class="h5 text-white-heading mb-0 mt-3">Eintitt: 8 €</h5>
+                </template>
+              </card-container>
+            </div>
+            <div class="col-xl-6 mb-3">
+              <card-container class="bg-brown-light h-100" :radius="'medium'" :textAlign="'start'">
+                <template #body>
+                  <div class="md-icon">
+                    <WarningIcon />
+                  </div>
+                  <h5 class="h5 text-white-heading mb-0 mt-3">Einlassbedingungen: 2 G - Nachverfolgung per Luca oder Coronawarnapp (wenn möglich bitte vorher einrichten um lange Wartezeiten beim Einlass zu vermeiden!!!)</h5>
+                </template>
+              </card-container>
+            </div>
+          </div>
+          <p class="f2 text-white-content">Aufgrund der aktuellen Regelungen der Bundesregierung ist es für uns nur möglich wirtschaftlich zu arbeiten wenn wir im 2G-Betrieb öffnen. Heißt, das wir nur Geimpften und Genesenen Einlass gewähren dürfen und werden. Da dann die Regelungen zur Personenzahl, zum Mindestabstand und zur Maskenpflicht entfallen. Lediglich die Kontaktnachverfolgung über die Luca- oder Coronawarnapp bleibt bestehen. Ein Betrieb in 3G, also Einlass auch für Getestete, würde wieder mit massiven Einschränkungen hinsichtlich der Personenzahl und Abstandsregeln einhergehen und würde uns ein wirtschaftliches Arbeiten unmöglich machen. (In unserem Fall würde das bedeuten, dass wir 70 Leute reinlassen dürfen 🤯) Uns ist bewusst, dass uns mit 2G einige Gäste nicht besuchen können was uns sehr leid tut; unsere Entscheidung ist aber so gefallen, da wir unter 3G nicht wirtschaftlich arbeiten können. Wir möchten euch bitten das zu akzeptieren und zu respektieren. Sobald sich die Regelungen ändern, freuen wir uns natürlich wieder auf alle Gäste.</p>
+
           <div class="row gx-4">
             <div class="col-auto">
               <button-base @click.native="reservationsSelcet($event)" ref="title" class="mt-4 px-4 py-2 w-100" :color="'yellow'" :uppercase="true" :radius="true" title="reservieren" data-bs-toggle="modal" data-bs-target="#exampleModal" />
@@ -130,6 +164,9 @@ import CardContainer from "@/components/base/card/CardContainer";
 import ButtonBase from "@/components/base/buttons/ButtonBase";
 import HeaderImage from "@/components/base/header/HeaderImage";
 import Ticket from "@/components/ticket-system/Ticket";
+import MusicalIcon from "@/components/svgs/MusicalIcon";
+import WarningIcon from "@/components/svgs/WarningIcon";
+import EnterIcon from "@/components/svgs/EnterIcon";
 
 export default {
 	name: "event-preview",
@@ -137,7 +174,10 @@ export default {
 		CardContainer,
 		ButtonBase,
 		HeaderImage,
-		Ticket
+		Ticket,
+		MusicalIcon,
+		WarningIcon,
+		EnterIcon
 	},
 	data() {
 		return {
@@ -176,6 +216,14 @@ export default {
 		resetStep() {
 			this.cuurentStep = 1;
 			this.generateTicket = false;
+		},
+
+		setUrlImage(img) {
+			if (img.includes("http")) {
+				return img;
+			} else {
+				return require(`@/assets/${img}`);
+			}
 		}
 	},
 	mounted() {

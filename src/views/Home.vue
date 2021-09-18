@@ -5,21 +5,7 @@
 
       <header-image class="home-header " minHeight="100vh" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="base">
         <template #background>
-
-          <div ref="carouselSlide" class="carousel slide carousel-fade " data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block h-100" src="https://i.postimg.cc/Ls1QDjYH/70850018-2721181141245950-5741574919095844864-n.jpg" alt="Cover of DK on 12th Isle">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block h-100" src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-03-900x500.jpg" alt="K2-138 6 Planets Artwork (Artist's Illustration) ">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block h-100" src="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-location-02.jpg" alt="A first look at dunes">
-              </div>
-            </div>
-          </div>
-          >
+          <Carousel carouselId="carousel" />
         </template>
         <template #content>
           <Events />
@@ -45,8 +31,9 @@
 
 <script>
 // @ is an alias to /src
-import { Carousel } from "bootstrap";
+
 import HeaderImage from "@/components/base/header/HeaderImage";
+import Carousel from "@/components/base/carousel/Carousel";
 import Events from "@/components/events/Events";
 import Gallery from "@/components/gallery/Gallery";
 import Tour from "@/components/tour/Tour";
@@ -58,19 +45,27 @@ export default {
 	components: {
 		HeaderImage,
 		Events,
-		// ContactUs,
+		Carousel,
 		Gallery,
 		Tour,
 		Newsletter
 	},
 	data() {
-		return {
-			carousel: null
-		};
+		return {};
 	},
-	mounted() {
-		var carouselElement = this.$refs.carouselSlide;
-		this.carousel = new Carousel(carouselElement);
-	}
+	computed: {
+		carousel: {
+			get() {
+				return this.$store.state.carousel;
+			},
+			set(value) {
+				this.$store.commit("carousel", value);
+			}
+		}
+	},
+	mounted() {}
+	// destroyed() {
+	// 	this.carousel = null;
+	// }
 };
 </script>
