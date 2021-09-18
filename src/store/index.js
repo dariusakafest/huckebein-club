@@ -16,286 +16,11 @@ const text_fill = "#000";
 
 export default new Vuex.Store({
   state: {
+    apiUrl: 'http://u.presta.info/api/',
     isAdmin: false,
     preparing: false,
     cuurentStep: 1,
-    events: [{
-        id: 1,
-        type: 'upcoming',
-        title: "Event name",
-        info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://i.postimg.cc/mgyzdSSB/241736835-522688485491006-2980202528459884281-n.jpg",
-        date: {
-          month: "September",
-          day: "10",
-          time: '11:00PM'
-        },
-        link: "event-preview",
-        tickets: [{
-            type: 'standard',
-            cost: '100$'
-          },
-          {
-            type: 'VIP',
-            cost: '200$'
-          }
-        ],
-        timeline: [{
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          }
-        ],
-        spases: 10,
-        galeries: [
-          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
-        ]
-
-      },
-      {
-        id: 2,
-        type: 'upcoming',
-        title: "Event name",
-        info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://i.postimg.cc/X7hQjnMp/178549330-237709484808425-8337052471093134629-n.jpg",
-        date: {
-          month: "September",
-          day: "10",
-          time: '11:00PM'
-        },
-        link: "event-preview",
-        tickets: [{
-            type: 'standard',
-            cost: '100$'
-          },
-          {
-            type: 'VIP',
-            cost: '200$'
-          }
-        ],
-        timeline: [{
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          }
-
-        ],
-        spases: 10,
-        galeries: [
-          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
-        ]
-      },
-      {
-        id: 3,
-        type: 'soon',
-        title: "Event name",
-        info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
-        date: {
-          month: "September",
-          day: "10",
-          time: '11:00PM'
-        },
-        link: "event-preview",
-        tickets: [{
-            type: 'standard',
-            cost: '100$'
-          },
-          {
-            type: 'VIP',
-            cost: '200$'
-          }
-        ],
-        timeline: [{
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-
-        ],
-        spases: 10,
-        galeries: [
-          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
-        ]
-      },
-      {
-        id: 4,
-        type: 'soon',
-        title: "Event name",
-        info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
-        date: {
-          month: "September",
-          day: "10",
-          time: '11:00PM'
-        },
-        link: "event-preview",
-        tickets: [{
-            type: 'standard',
-            cost: '100$'
-          },
-          {
-            type: 'VIP',
-            cost: '200$'
-          }
-        ],
-        timeline: [{
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          }
-
-        ],
-        spases: 4,
-        galeries: [
-          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
-        ]
-      },
-      {
-        id: 5,
-        type: 'soon',
-        title: "Event name",
-        info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
-        date: {
-          month: "September",
-          day: "10",
-          time: '11:00PM'
-        },
-        link: "event-preview",
-        tickets: [{
-            type: 'standard',
-            cost: '100$'
-          },
-          {
-            type: 'VIP',
-            cost: '200$'
-          }
-        ],
-        timeline: [{
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          }
-
-        ],
-        spases: 3,
-        galeries: [
-          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
-        ]
-      },
-      {
-        id: 6,
-        type: 'soon',
-        title: "Event name",
-        info: "The Huckebein is not only the oldest club in Darmstadt, but also one",
-        img: "https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg",
-        date: {
-          month: "September",
-          day: "10",
-          time: '11:00PM'
-        },
-        link: "event-preview",
-        tickets: [{
-            type: 'standard',
-            cost: '100$'
-          },
-          {
-            type: 'VIP',
-            cost: '200$'
-          }
-        ],
-        timeline: [{
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          },
-          {
-            time: "10:00 am",
-            title: "Lorem Ipsum is simply dummy",
-            content: "The Huckebein is not only the oldest club in Darmstadt, but also one of the most legendary and diverse clubs in the region. The Huckebein was converted from a cinema into a discotheque in 1974. The early days of the Huckebein were marked by spectacular revues and guest appearances by international artists."
-          }
-
-        ],
-        spases: 3,
-        galeries: [
-          'https://huckebein-da.de/wp-content/90er-party-10-01-2020/cache/IMG_9415.jpg-nggid0226-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/2000er-21-09-2019/cache/70643285_2721178084579589_6737958652608512000_n.jpg-nggid0216-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/high-heels-and-champagne-28-09-2019/cache/70184247_2736166646414066_7081573864697757696_n.jpg-nggid018-ngg0dyn-400x260x100-00f0w010c011r110f110r010t010.jpg',
-          'https://huckebein-da.de/wp-content/gallery/ciroc-night-12-10-2019/cache/72216112_2764765906887473_4629605669958320128_n.jpg-nggid011-ngg0dyn-800x520x100-00f0w010c011r110f110r010t010.jpg'
-        ]
-      },
-    ],
+    events: null,
     seats: [{
         id: "w1",
         x: 16,
@@ -1892,14 +1617,37 @@ export default new Vuex.Store({
   },
   getters: {
     upcomingEvents: state => {
-      return state.events.filter(event => event.type == 'upcoming')
+      setTimeout(async function () {
+        if (state.events === null) {
+          const response = await fetch(state.apiUrl+'events');
+          const json = await response.json()
+          state.events = json;
+        }
+      });
+
+      return state.events;
     },
     allEvents: state => {
-      return state.events
+      setTimeout(async function () {
+        if (state.events === null) {
+          const response = await fetch(state.apiUrl+'events');
+          const json = await response.json()
+          state.events = json;
+        }
+      });
+
+      return state.events;
     },
     galeries: state => {
-      return state.events.map(event => {
+      setTimeout(async function () {
+        if (state.events === null) {
+          const response = await fetch(state.apiUrl+'events');
+          const json = await response.json()
+          state.events = json;
+        }
+      });
 
+      return state.events.map(event => {
         const galeries = {}
         galeries.title = event.title;
         galeries.galeries = event.galeries;
@@ -1921,5 +1669,5 @@ export default new Vuex.Store({
 
   },
   actions: {},
-  modules: {},
+  modules: {}
 });

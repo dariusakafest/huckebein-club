@@ -24,7 +24,7 @@
       </div>
 
     </div>
-    <button-base @click.native="goNext()" class="mt-4 w-100 py-3" :color="'yellow'" :uppercase="true" :radius="true" :title="'continue'" />
+    <button-base @click.native="buyTicket()" class="mt-4 w-100 py-3" :color="'yellow'" :uppercase="true" :radius="true" :title="'continue'" />
   </div>
 </template>
 
@@ -85,7 +85,10 @@ export default {
 	methods: {
 		goNext() {
 			this.cuurentStep++;
-		}
+		},
+    buyTicket: function () {
+        console.log(this.$store);
+    }
 	}
 };
 </script>

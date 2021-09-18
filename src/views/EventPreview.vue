@@ -52,6 +52,9 @@ export default {
 			upcomingEvents: "upcomingEvents"
 		}),
 		event() {
+      if (this.events === null) {
+        return null;
+      }
 			return this.events.find(event => event.id == this.$route.params.id);
 		},
 		cuurentStep: {
