@@ -9,6 +9,14 @@
               <h3 class="h3 text-white-heading text-center uppercase">Öffnungszeiten</h3>
               <h4 class="h4 text-white-content text-center mb-4 mt-3">
                 Freitag, Samstag und vor Feiertagen ab 22 Uhr.</h4>
+
+              <router-link to="/anfahrt-kontakt" class="h5 d-block text-white-content text-center mb-0">
+                <span class="sx-icon">
+                  <location-icon :fill="'yellow'" />
+                </span>
+                Heidelberger Strasse 89a, 64285 Darmstadt
+
+              </router-link>
             </div>
           </div>
         </div>
@@ -59,13 +67,15 @@ import FacebookIcon from "@/components/svgs/FacebookIcon";
 import InstagramIcon from "@/components/svgs/InstagramIcon";
 import YouTubeIcon from "@/components/svgs/YouTubeIcon";
 import TwitchIcon from "@/components/svgs/TwitchIcon";
+import LocationIcon from "@/components/svgs/LocationIcon";
 export default {
 	name: "footer-bar",
 	components: {
 		FacebookIcon,
 		InstagramIcon,
 		YouTubeIcon,
-		TwitchIcon
+		TwitchIcon,
+		LocationIcon
 	}
 };
 </script>

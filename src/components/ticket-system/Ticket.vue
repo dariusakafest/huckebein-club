@@ -2,12 +2,12 @@
   <div class="ticket ticket-wrap d-flex w-100">
 
     <template v-if="cuurentStep == 1">
-      <TicketInfo :title="title" :info="info" :day="day" :month="month" :time="time" :tickets="tickets" :spases="spases" />
+      <TicketInfo :id="id" :ticketType="ticketType" :title="title" :info="info" :day="day" :month="month" :time="time" :tickets="tickets" :spases="spases" />
     </template>
-    <template v-if="cuurentStep == 2">
+    <!-- <template v-if="cuurentStep == 2">
       <TicketAddOns />
-    </template>
-    <template v-if="cuurentStep == 3">
+    </template> -->
+    <template v-if="cuurentStep == 2">
       <PaymentForm />
     </template>
 
@@ -16,12 +16,20 @@
 
 <script>
 import TicketInfo from "./steps/TicketInfo.vue";
-import TicketAddOns from "./steps/TicketAddOns";
+// import TicketAddOns from "./steps/TicketAddOns";
 import PaymentForm from "../forms/PaymentForm";
 
 export default {
 	name: "ticket",
 	props: {
+    id: {
+      type: Number,
+      default: () => {}
+    },
+		ticketType: {
+			type: String,
+			default: () => {}
+		},
 		title: {
 			type: String,
 			default: () => {}
@@ -53,7 +61,7 @@ export default {
 	},
 	components: {
 		TicketInfo,
-		TicketAddOns,
+		// TicketAddOns,
 		PaymentForm
 	},
 	data() {

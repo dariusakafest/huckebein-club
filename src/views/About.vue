@@ -1,7 +1,7 @@
 <template>
   <div class="about-page">
     <!-- Header Section -->
-    <header-image backgroundImage="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg" minHeight="550px" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="base">
+    <header-image backgroundImage="https://huckebein.facera.de/wp-content/uploads/2019/10/huckebein-01-900x500.jpg" minHeight="380px" contentDisplay="flex" flexAlign="end" :overlay="true" overlay-type="base">
       <!--  -->
     </header-image>
     <div class="bg-gradient-black pb-5">
@@ -10,7 +10,7 @@
       <AboutUs />
       <!--  -->
       <!-- Tour Section -->
-      <Tour class="my-5" />
+      <Tour class="my-5" colxl="12" />
       <!--  -->
       <!-- Contact us Section -->
       <ContactUs class="my-5" />

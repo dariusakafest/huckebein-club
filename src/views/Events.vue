@@ -3,8 +3,8 @@
     <div class="container">
       <h2 class="h2 text-white-heading text-center uppercase mb-4 mt-4">all events</h2>
       <div class="row">
-        <div class="col-lg-6 mb-4" v-for="event in events" :key="event.id">
-          <card :title="event.title" :info="event.info" :img="event.img" :day="event.date.day" :month="event.date.month" :time="event.date.time" :height="'md'" :link="event.link" :eventId="event.id" />
+        <div class="col-lg-4 mb-4" v-for="event in events" :key="event.id">
+          <card :id="event.id" :title="event.title" :info="event.info" :img="event.img" :day="event.date.day" :month="event.date.month" :time="event.date.time" :height="'md'" :link="event.link" :eventId="event.id" />
         </div>
       </div>
     </div>

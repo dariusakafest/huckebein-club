@@ -67,11 +67,11 @@
       margin-top: 15px;
       margin-bottom: 15px;
       text-transform: uppercase;
-      color: rgba($white, 0.9);
+      color: $text-white-content !important
     }
 
     &.router-link-exact-active {
-      color: rgba($yellow, 1);
+      color: rgba($yellow, 1) !important;
       border-bottom: 2px solid $yellow;
     }
   }

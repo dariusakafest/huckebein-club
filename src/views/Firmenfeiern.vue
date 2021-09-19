@@ -38,7 +38,7 @@
         </div>
 
         <!-- Tuor Section -->
-        <Tour class="mb-3" />
+        <Tour class="mb-3" colxl="12" />
         <!--  -->
         <div class="pb-5"></div>
       </div>
@@ -72,7 +72,7 @@
                   <party-icon fill="yellow" />
                 </div>
                 <h4 class="h4 text-white-heading mb-0">
-                  FIRMENFEIERN
+                  WEIHNACHTSFEIERN
                 </h4>
               </template>
             </card-container>
@@ -98,7 +98,7 @@
                   <business-plan-icon fill="yellow" />
                 </div>
                 <h4 class="h4 text-white-heading mb-0">
-                  FIRMENFEIERN
+                  PRÄSENTATIONEN
                 </h4>
               </template>
             </card-container>

@@ -67,10 +67,10 @@ body {
 a,
 .nav-link {
   text-decoration: none !important;
-  color: $yellow;
+  color: $text-white-heading;
 
   &:hover {
-    color: $text-white-heading;
+    color: $yellow;
   }
 
   &:focus {
@@ -213,6 +213,45 @@ img {
   @include background;
 
   .card-overlay {}
+}
+
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.three-quarter-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid $yellow;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.5s linear 0s infinite;
+}
+
+
+.warnapp {
+  width: 180px;
+}
+
+.lucalogo {
+  width: 96px;
+}
+
+.lucaapp-card {
+  border: 1px solid rgba($brown, .7)
+}
+
+
+.icon-list-item {
+  padding: 1rem .75rem;
 }
 
 /* 

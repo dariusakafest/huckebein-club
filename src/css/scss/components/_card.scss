@@ -68,11 +68,11 @@
 
 
 %linear-base {
-  background: linear-gradient(0deg, rgba(0, 0, 0, .9) 18%, rgba(0, 0, 0, .64) 70%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, .9) 18%, rgba(0, 0, 0, .34) 70%);
 }
 
 %linear-brown {
-  background: linear-gradient(0deg, rgba(29, 29, 27, 1) 0%, rgba(29, 29, 27, 1) 13%, rgba(0, 0, 0, .7) 64%);
+  background: linear-gradient(0deg, rgba(12, 12, 12, 1) 0%, rgba(29, 29, 27, 1) 13%, rgba(0, 0, 0, .7) 64%);
 
 
 }
@@ -99,7 +99,8 @@
 }
 
 .card-overlay_brown,
-.card-overlay_base {
+.card-overlay_base,
+.card-overlay {
   @extend %card-overlay;
 }
 
@@ -117,7 +118,14 @@
       @extend %linear-base
     }
   }
+}
 
+.card-overlay {
+  .card-overlay_backgrounds {
+    &::before {
+      background-color: rgba(0, 0, 0, .3)
+    }
+  }
 }
 
 .card-content {
