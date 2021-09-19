@@ -6,15 +6,9 @@
     <div class="card-content mx-4">
       <div class="bg-brown-light border-radius-large p-4">
         <div class="container">
-          <h2 class="h2 text-white-heading uppercase mb-4 mt-3">CLUB HUCKEBEIN IN DARMSTADT - <br> RNB, HOUSE UND CLASSICS!</h2>
+          <h2 class="h2 text-white-heading uppercase mb-4 mt-3">HUCKEBEIN - DER KULT CLUB IN DARMSTADT</h2>
           <p class="f3 text-white-content">
-            Das Huckebein ist nicht nur der älteste Club Darmstadts, sondern auch einer der legendärsten und vielseitigsten Clubs der Region. Das Huckebein wurde im Jahr 1974 von einem Kino zu einer Diskothek umgebaut. Die Anfangszeiten des Huckebeins wurden durch spektakuläre Revuen und Gastauftritte internationaler Künstler geprägt.
-          </p>
-          <p class="f3 text-white-content">
-            Sogar Latoya Jackson hat dort schon einmal die Bühne erobert. Heutzutage hat sich das Huckebein dem Ausgehverhalten angepasst. Heute drehen eine Auswahl der beliebtesten DJ´s des Rhein-Main Gebiets, Freitags sowie Samstags und vor Feiertagen, ihre Platten.
-          </p>
-          <p class="f3 text-white-content">
-            Die im Juli 2009 frisch renovierte Kult-Location hat von ihrer Gemütlichkeit nach dem Umbau nichts eingebüsst. Ganz im Gegenteil durch die Kombination aus klassischer Optik und modernster Technik hat das Huckebein eher noch an Charme gewonnen, was ihm einen unschlagbaren Kultfaktor im Rhein-Main-Gebiet einräumt. Das Huckbein bietet euch stilvolles Ambiente verteilt auf zwei Etagen und drei Theken.
+            Das Huckebein ist nicht nur der älteste Club Hessens, sondern auch einer der legendärsten und vielseitigsten Clubs der Region. Das Huckebein wurde im Jahr 1974 von einem Kino zu einer Diskothek umgebaut. Die Anfangszeiten des Huckebeins wurden durch spektakuläre Revuen und Gastauftritte internationaler Künstler geprägt. Sogar Latoya Jackson hat dort schon einmal die Bühne erobert. Heutzutage hat sich das Huckebein dem Ausgehverhalten angepasst. Heute drehen eine Auswahl der beliebtesten DJ´s des Rhein-Main Gebiets, Freitags sowie Samstags und vor Feiertagen, ihre Platten. Die Kombination aus klassischer Optik und modernster Technik räumt ihm einen unschlagbaren Kultfaktor im Rhein-Main-Gebiet ein. Auf den zwei Etagen, mit drei Theken, den vielen gemütlichen Sitzgruppen aber vor allem auf der zentral gelegenen Tanzfläche kann ausgiebig gelacht, getanzt und gefeiert werden.
           </p>
         </div>
       </div>

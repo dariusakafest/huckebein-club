@@ -1,7 +1,6 @@
 <template>
   <header id="homeHeader" :style="{'background-image': `url(${backgroundImage})`, 'min-height': `${minHeight}`}" :class="[filterImage? `${filterImage}` : '', `d-${contentDisplay}`,flexAlign ? `align-items-${flexAlign}` : '', 'header-image bg-center']">
     <template v-if="overlay">
-
       <div :class="[overlayType? `card-overlay_${overlayType}` : 'card-overlay']">
         <div class="card-overlay_backgrounds" id="fade_background">
           <slot name="background"></slot>
@@ -19,6 +18,8 @@
 
 <script>
 import Vue from "vue";
+
+
 export default {
 	name: "header-image",
 	props: {

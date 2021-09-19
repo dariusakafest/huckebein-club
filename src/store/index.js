@@ -21,6 +21,7 @@ export default new Vuex.Store({
     preparing: false,
     cuurentStep: 1,
     events: null,
+    carousel: null,
     seats: [{
         id: "w1",
         x: 16,
@@ -1686,7 +1687,8 @@ export default new Vuex.Store({
 
     isAdmin: (state, isAdmin) => state.isAdmin = isAdmin,
     cuurentStep: (state, cuurentStep) => state.cuurentStep = cuurentStep,
-    preparing: (state, preparing) => state.preparing = preparing
+    preparing: (state, preparing) => state.preparing = preparing,
+    carousel: (state, carousel) => state.carousel = carousel,
 
   },
   actions: {},

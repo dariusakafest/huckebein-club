@@ -1,11 +1,21 @@
 <template>
   <div class="card event-card bg-transparent border-radius-large box-shadow-large overflow-hidden bg-center">
     <div class="card-body p-0 position-relative">
+      <template v-if="overlay">
+        <div :class="[overlayType? `card-overlay_${overlayType}` : 'card-overlay']">
+          <div class="thumbnail-overlay d-flex align-items-end h-100 w-100 p-4">
+            <router-link :to="{name: link, params: {id: eventId}}" class="h4 thumbnail-link text-white-heading uppercase stretched-link">
+              <slot name="background"></slot>
+            </router-link>
+          </div>
+
+        </div>
+      </template>
       <div class="card-content w-100 h-100">
         <div class="card-image">
-          <img class="img-fluid" :src="img" alt="" srcset="">
+          <img class="img-fluid" :src="setUrlImage(img)" alt="" srcset="">
         </div>
-        <router-link :to="{name: link, params: {id: eventId}}" class="stretched-link"></router-link>
+
       </div>
     </div>
   </div>
@@ -53,12 +63,23 @@ export default {
 		height: {
 			type: String,
 			default: () => {}
+		},
+		overlay: {
+			type: Boolean,
+			default: () => {}
+		},
+		overlayType: {
+			type: String,
+			default: () => {}
 		}
 	},
 	methods: {
 		setUrlImage(img) {
-			return img;
-      //return require(`${img}`) || img;
+      if (img.includes("http")) {
+        return img;
+      } else {
+        return require(`@/assets/${img}`);
+      }
 		}
 	}
 };
