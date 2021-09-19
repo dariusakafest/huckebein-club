@@ -254,6 +254,23 @@ img {
   padding: 1rem .75rem;
 }
 
+.toast-live {
+  position: fixed;
+  bottom: 20px;
+  left: 14px;
+  z-index: 20
+}
+
+.youtube-live-wrap {
+  iframe {
+
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+
+
 /* 
 
    ============================= end global classes =============================

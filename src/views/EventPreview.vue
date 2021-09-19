@@ -227,7 +227,6 @@ export default {
 		}
 	},
 	mounted() {
-		console.log(this.$refs.title);
 		var myModalEl = document.querySelector("#myModal");
 		this.modal = new Modal(myModalEl);
 
