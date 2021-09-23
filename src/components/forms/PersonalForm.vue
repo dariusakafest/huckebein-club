@@ -5,6 +5,11 @@
         <input type="text" class="form-control" name="name" id="formName" placeholder="Your name">
       </div>
     </template>
+    <template v-if="lastName">
+      <div class="mb-3">
+        <input type="text" class="form-control" name="lastname" id="formLastname" placeholder="Your lastname">
+      </div>
+    </template>
     <template v-if="email">
       <div class="mb-3">
         <input type="email" class="form-control" name="email" id="formEmail" placeholder="name@example.com">
@@ -22,6 +27,10 @@ export default {
 			default: () => {}
 		},
 		fullName: {
+			type: Boolean,
+			default: () => {}
+		},
+    lastName: {
 			type: Boolean,
 			default: () => {}
 		}

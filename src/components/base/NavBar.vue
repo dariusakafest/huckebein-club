@@ -31,11 +31,11 @@
               Events
             </span>
           </router-link>
-          <router-link to="/galerie" class="nav-item hover-item rounded">
-            <span class="nav-link">
-              GALERIE
-            </span>
-          </router-link>
+<!--          <router-link to="/galerie" class="nav-item hover-item rounded">-->
+<!--            <span class="nav-link">-->
+<!--              GALERIE-->
+<!--            </span>-->
+<!--          </router-link>-->
           <router-link to="/firmenfeiern" class="nav-item hover-item rounded">
             <span class="nav-link">
               FIRMENFEIERN

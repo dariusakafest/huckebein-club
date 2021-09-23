@@ -24,18 +24,19 @@
     <!--  -->
 
     <!-- notification live youtube popup -->
-    <div id="toastLive" class="toast toast-live bg-brown-light justify-content-between align-items-start" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="d-flex p-2 align-items-start w-100">
-        <div class="toast-body">
-          <div class="notification-live-icon md-icon mb-2">
-            <LiveIcon />
-          </div>
-          <button-base class="text-btn h4 mb-0 text-white-content" data-bs-toggle="modal" data-bs-target="#exampleModal" title="we are live now join us" />
+<!--    <div id="toastLive" class="toast toast-live bg-brown-light justify-content-between align-items-start" role="alert" aria-live="assertive" aria-atomic="true">-->
+<!--      <div class="d-flex p-2 align-items-start w-100">-->
+<!--        <div class="toast-body">-->
+<!--          <div class="notification-live-icon md-icon mb-2">-->
+<!--            <LiveIcon />-->
+<!--          </div>-->
+<!--          <button-base class="text-btn h4 mb-0 text-white-content" data-bs-toggle="modal" data-bs-target="#exampleModal" title="LIVE STREAM SPECIAL EVENT!-->
+<!--          Jetzt teilnehmen - Klicke hier" />-->
 
-        </div>
-        <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-    </div>
+<!--        </div>-->
+<!--        <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close"></button>-->
+<!--      </div>-->
+<!--    </div>-->
     <!--  -->
 
     <!-- youtube popup -->
@@ -43,12 +44,12 @@
       <div class="modal-dialog modal-fullscreen modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bg-light">
-            <h5 class="modal-title" id="exampleModalLabel">event name</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Wir sind wieder da!</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body bg-brown-light p-0">
             <div class="youtube-live-wrap d-flex p-2 align-items-start w-100 h-100">
-              <iframe src="https://www.youtube.com/embed/UZLA73ucgfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/GReDdDQsBqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>

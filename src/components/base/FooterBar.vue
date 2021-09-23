@@ -47,7 +47,7 @@
                   <YouTubeIcon fill="white" />
                 </span>
               </a>
-              <a class="youtube-icon ms-3" href="https://www.twitch.tv/huckebein.de" title="Twitch">
+              <a class="youtube-icon ms-3" href="https://twitch.tv/huckebein_da" title="Twitch">
                 <span class="sm-icon">
                   <TwitchIcon fill="white" />
                 </span>

@@ -6,7 +6,7 @@
         <div class="col-lg-4 mb-4" v-for="event in events" :key="event.id">
           <card :id="event.id" :title="event.title" :info="event.info" :img="event.img" :day="event.date.day" :month="event.date.month" :time="event.date.time" :height="'md'" :link="event.link" :eventId="event.id" :overlay="true" overlay-type="base_with_hover">
               <template #background>
-                inof reservieren tickets
+                INFO - TICKETS - RESERVIERUNG
               </template>
            </card>
         </div>

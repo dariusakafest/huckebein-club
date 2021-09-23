@@ -2,15 +2,14 @@
   <div class="d-flex flex-column w-100">
     <div class="mb-4">
       <h2 class="h2 text-white-heading mt-2 mb-5 uppercase">{{ticketType}}</h2>
-      <personal-form fullName email/>
-<!--      <spiner-btn :max="spases" />-->
+      <personal-form lastName fullName email/>
+      <spiner-btn v-model="count" :max="spases" />
     </div>
     <div class="mb-0">
-
       <div class="d-flex mt-3">
         <div class="ticket-item border-radius-medium flex-grow-1" :class="{'me-1': ticket.type == 'standard', 'ms-1': ticket.type == 'VIP'}" v-for="(ticket, index) in tickets" :key="index">
           <div class="ticket-content p-3">
-            <h3 style="color: #FFFFFF; " class="h3 text-dark-heading mb-2">Ticket Preis: {{ticket.cost}}</h3>
+            <h3 style="color: #FFFFFF; " class="h3 text-dark-heading mb-2">Ticket Preis: {{ticket.cost | getTotalCost(count)}}</h3>
 <!--            <h5 class="h5 text-dark-heading mb-0">{{ticket.type}}</h5>-->
           </div>
           <div class="svg-bg">
@@ -39,6 +38,11 @@ import Swal from 'sweetalert2'
 
 export default {
 	name: "ticket-info",
+  data: function () {
+    return {
+      count: 1
+    }
+  },
 	props: {
     id: {
       type: Number,
@@ -97,7 +101,9 @@ export default {
 		goNext() {
 			this.cuurentStep++;
 		},
-    buyTicket: function (state) {
+    buyTicket: function () {
+      let self = this;
+
       let props = this._props;
 
       let ticket = null;
@@ -114,10 +120,10 @@ export default {
           ticketType: ticket.type,
           ticketCost: ticket.cost,
           name: document.getElementById('formName').value,
-          email: document.getElementById('formEmail').value
+          lastname: document.getElementById('formLastname').value,
+          email: document.getElementById('formEmail').value,
+          quantity: self.count
         };
-
-        let self = this;
 
         (async function () {
           let response = await fetch(self.$store.state.apiUrl+'buy', {
@@ -150,7 +156,7 @@ export default {
                 const b = Swal.getHtmlContainer().querySelector('b')
                 timerInterval = setInterval(() => {
                   b.textContent = Math.ceil(Swal.getTimerLeft() / 1000)
-                }, 1000)
+                }, 100)
               },
               willClose: () => {
                 clearInterval(timerInterval)
@@ -166,7 +172,13 @@ export default {
         })();
       }
     }
-	}
+	},
+  filters: {
+    getTotalCost: function (cost, count) {
+      let dataPrice = (String(cost).match(/([0-9\.\,]+)(\ [^0-9\.\,]+)/))
+      return (count * dataPrice[1]) + dataPrice[2];
+    }
+  }
 };
 </script>
 

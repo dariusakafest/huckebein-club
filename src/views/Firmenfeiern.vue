@@ -33,7 +33,7 @@
               Gerne planen wir mit Ihnen gemeinsam und gestalten eine individuelle Feier, die genau auf Ihre Wünsche und Konditionen abgestimmt ist.
             </p>
 
-            <button-base class="mt-4 px-4 py-3" :color="'yellow'" :uppercase="true" :radius="true" title="ANFRAGE FIRMENFEIER" />
+            <button-link-base link="mailto:info@huckebein.de" class="mt-4 px-4 py-3" :color="'yellow'" :uppercase="true" :radius="true" title="ANFRAGE FIRMENFEIER" />
           </div>
         </div>
 
@@ -126,8 +126,8 @@
             <p class="f3 text-white-content">
               Das Huckebein bietet viele verschiedene Einsatzmöglichkeiten für Ihre Feier. <br> Wir freuen uns auf Ihre Anfrage!
             </p>
-
-            <button-base class="mt-4 px-4 py-3" :color="'yellow'" :uppercase="true" :radius="true" title="ANFRAGE FIRMENFEIER" />
+            
+            <button-link-base link="mailto:info@huckebein.de" class="mt-4 px-4 py-3" :color="'yellow'" :uppercase="true" :radius="true" title="ANFRAGE FIRMENFEIER" />
           </div>
         </div>
 
@@ -148,6 +148,7 @@
 <script>
 import Tour from "@/components/tour/Tour";
 import ButtonBase from "@/components/base/buttons/ButtonBase";
+import ButtonLinkBase from "@/components/base/buttons/ButtonLinkBase";
 import CardContainer from "@/components/base/card/CardContainer";
 import FirmenfeiernIcon from "@/components/svgs/FirmenfeiernIcon";
 import PartyIcon from "@/components/svgs/PartyIcon";
@@ -159,6 +160,7 @@ export default {
 	components: {
 		Tour,
 		ButtonBase,
+    ButtonLinkBase,
 		CardContainer,
 		FirmenfeiernIcon,
 		PartyIcon,

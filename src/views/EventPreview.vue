@@ -14,7 +14,7 @@
           </div>
           <div class="col-xl-4 col-lg-3 align-self-end">
             <div class="d-flex justify-content-end justify-content-sm-start">
-              <button-base class="mt-4 px-4 py-2" :color="'yellow'" :uppercase="true" :radius="true" title="Join us on Facebook" />
+              <button-link-base :link="event.facebook_link" class="mt-4 px-4 py-2" :color="'yellow'" :uppercase="true" :radius="true" title="Join us on Facebook" />
             </div>
           </div>
         </div>
@@ -61,9 +61,9 @@
           <p class="f2 text-white-content">Aufgrund der aktuellen Regelungen der Bundesregierung ist es für uns nur möglich wirtschaftlich zu arbeiten wenn wir im 2G-Betrieb öffnen. Heißt, das wir nur Geimpften und Genesenen Einlass gewähren dürfen und werden. Da dann die Regelungen zur Personenzahl, zum Mindestabstand und zur Maskenpflicht entfallen. Lediglich die Kontaktnachverfolgung über die Luca- oder Coronawarnapp bleibt bestehen. Ein Betrieb in 3G, also Einlass auch für Getestete, würde wieder mit massiven Einschränkungen hinsichtlich der Personenzahl und Abstandsregeln einhergehen und würde uns ein wirtschaftliches Arbeiten unmöglich machen. (In unserem Fall würde das bedeuten, dass wir 70 Leute reinlassen dürfen 🤯) Uns ist bewusst, dass uns mit 2G einige Gäste nicht besuchen können was uns sehr leid tut; unsere Entscheidung ist aber so gefallen, da wir unter 3G nicht wirtschaftlich arbeiten können. Wir möchten euch bitten das zu akzeptieren und zu respektieren. Sobald sich die Regelungen ändern, freuen wir uns natürlich wieder auf alle Gäste.</p>
 
           <div class="row gx-4">
-            <div class="col-auto">
-              <button-base @click.native="reservationsSelcet($event)" ref="title" class="mt-4 px-4 py-2 w-100" :color="'yellow'" :uppercase="true" :radius="true" title="reservieren" data-bs-toggle="modal" data-bs-target="#exampleModal" />
-            </div>
+<!--            <div class="col-auto">-->
+<!--              <button-base @click.native="reservationsSelcet($event)" ref="title" class="mt-4 px-4 py-2 w-100" :color="'yellow'" :uppercase="true" :radius="true" title="reservieren" data-bs-toggle="modal" data-bs-target="#exampleModal" />-->
+<!--            </div>-->
             <div class="col-auto">
               <button-base @click.native="reservationsSelcet($event)" ref="title" class="mt-4 px-4 py-2 w-100" :color="'yellow'" :uppercase="true" :radius="true" title="tickets kaufen" data-bs-toggle="modal" data-bs-target="#exampleModal" />
             </div>
@@ -162,6 +162,7 @@ import { Modal } from "bootstrap";
 
 import CardContainer from "@/components/base/card/CardContainer";
 import ButtonBase from "@/components/base/buttons/ButtonBase";
+import ButtonLinkBase from "@/components/base/buttons/ButtonLinkBase";
 import HeaderImage from "@/components/base/header/HeaderImage";
 import Ticket from "@/components/ticket-system/Ticket";
 import MusicalIcon from "@/components/svgs/MusicalIcon";
@@ -173,6 +174,7 @@ export default {
 	components: {
 		CardContainer,
 		ButtonBase,
+		ButtonLinkBase,
 		HeaderImage,
 		Ticket,
 		MusicalIcon,

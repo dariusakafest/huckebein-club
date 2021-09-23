@@ -16,7 +16,7 @@ const text_fill = "#000";
 
 export default new Vuex.Store({
   state: {
-    apiUrl: 'http://u.presta.info/api/',
+    apiUrl: 'https://www.huckebein.de/api/',
     isAdmin: false,
     preparing: false,
     cuurentStep: 1,

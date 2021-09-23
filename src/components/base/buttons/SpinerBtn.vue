@@ -13,7 +13,8 @@ export default {
 		max: {
 			type: Number,
 			default: () => {}
-		}
+		},
+    value: Number,
 	},
 	data() {
 		return {
@@ -22,6 +23,9 @@ export default {
 	},
 	computed: {},
 	methods: {
+    updateValue: function (value) {
+      this.$emit('input', value);
+    },
 		spiner(type) {
 			var min = 1;
 			if (type == "increment") {
@@ -38,6 +42,7 @@ export default {
 					this.spin--;
 				}
 			}
+      this.updateValue(this.spin);
 		}
 	}
 };
